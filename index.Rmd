@@ -154,6 +154,7 @@ Anyway, I don't want all of this data, and I want it by album, so I will group b
 
 ```{r}
 lastfm %>% group_by(Artist,Album) %>% summarize(PlayCount=n(),PlayTimes=list(Date)) -> lastfm_wide
+lastfm_wide %>% glimpse()
 ```
 
 
@@ -494,7 +495,7 @@ data_full %>% arrange(desc(PlayCount)) %>% select(Artist,Album,Rating,TrackNum,G
 ```
 These are the 10 albums played the most. The album I have played the most is J Dilla's Donuts, with 509 plays over lastfm's time period.
 
-I am now going to construct a table with some play history that I got from my lastfm data. The history column of this table contains a histogram that shows the number of times I played each album over each month.
+I am now going to construct a table with some play history that I got from my lastfm data. The history column of this table contains a histogram that shows the number of times I played each of my top 20 most listen to albums over each month.
 
 ```{r}
 playdata <- data_full %>% arrange(desc(PlayCount)) %>% select(Artist,Album,Rating,PlayCount,PlayTimes) %>% slice_head(n=20)
