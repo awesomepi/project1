@@ -15,76 +15,645 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.align = "center", warning = F, message = F,
 tidy=TRUE, tidy.opts=list(width.cutoff=60), R.options=list(max.print=100))
+library(tidyverse)
+library(kableExtra)
 ```
 
 ## Data Wrangling, Exploration, Visualization
 
-### Name and EID here
+Luis Kim
 
-#### Introduction 
+lyk226
 
-Paragraph or two introducing your datasets and variables, why they are interesting to you, etc.
+### Introduction 
+
+There are three datasets that I will be analyzing today. They are all datasets related to my music listening data.
+
+The first one, which I am calling lastfm, is csv data that I obtained from my <a href="https://www.last.fm/user/awepi">last fm</a>. It contains listening data from February 11, 2020 to October 30, 2021. It has artist names, album names, track names, and the date and time that each track was listened to.
+
+The second one, which I am calling rym, is csv data that I obtained from my <a href="https://rateyourmusic.com/~awepi">RateYourMusic</a>. It contains 489 album ratings. More specifically, it contains a unique album ID, artist names, album titles, album release dates, the rating I gave them (from 1-10), and some other data that is empty and not relevant to me.
+
+The third one, which I am calling rymextra, is data that I scraped manually off of RateYourMusic. It contains various data not included in the csv I exported from rym. It contains the date that I rated each album, the length of each album in H:MM:SS format, the number of tracks on each album, a general genre I have called the genera, and a short list of genres for each album.
+
+The datasets are very dirty on account of them coming from different sources and being split in different ways. They are important to me for obvious reasons (they are my datasets).
 
 ```{R}
 # read your datasets in here, e.g., with read_csv()
-
+lastfm <- read.csv("~/project1/data/awepilastfm.csv",col.names = c("Artist","Album","Track","DateTime"),stringsAsFactors = F)
+lastfm %>% glimpse()
 ```
 
-#### Tidying: Reshaping
+```{R}
+rym <- read.csv("~/project1/data/awepirym.csv",stringsAsFactors = F)
+rym %>% glimpse()
+```
+
+```{R}
+rymextra <- read.csv("~/project1/data/rymextra.csv",stringsAsFactors = F)
+rymextra %>% glimpse()
+```
+
+### Wrangling, Part 1
+
+I am adding this extra section because I want to do a little wrangling before I join these datasets together.
+
+I will start with rym, the dirtiest dataset in the bunch. First, I trim some columns and combine the First.Name and Last.Name columns into one column: Artist.
+
+```{r}
+rym %>% select(-Ownership,-Purchase.Date, -Media.Type, -Review) %>% mutate(Artist = trimws(str_c(First.Name,Last.Name,sep=" "))) %>% select(-First.Name,-Last.Name) -> rym
+```
+
+I'm also going to get rid of the localized names, because they are very poorly managed on RYM. I will deal with that in a bit.
+
+```{r}
+rym %>% select(-First.Name.localized,-Last.Name.localized) -> rym
+```
+
+I also want to rename Title to Album for easier joining later.
+
+```{r}
+rym %>% rename(Album=Title) -> rym
+rym %>% glimpse()
+```
+
+Then, I will deal with rymextra. First, I want to split up DateReviewed. 
+
+```{r}
+rymextra %>% separate(DateReviewed,into=c("YearRev","MonthRev","DayRev"),sep=",") -> rymextra
+```
+
+And I want to split up Genres.
+
+```{r}
+rymextra %>% separate(Genres, into=c("Genre1","Genre2","Genre3","Genre4"),sep=", ") -> rymextra
+```
+
+```{r}
+glimpse(rymextra)
+```
+
+There are two albums named Shrines. I am going to distinguish these into "Shrines (AH)" and "Shrines (PR)" in each dataframe.
+
+
+```{r}
+lastfm[lastfm$Album == "Shrines" & lastfm$Artist == "Armand Hammer",]$Album <- "Shrines (AH)"
+lastfm[lastfm$Album == "Shrines" & lastfm$Artist == "Purity Ring",]$Album <- "Shrines (PR)"
+rym[rym$Album == "Shrines" & rym$Artist == "Armand Hammer",]$Album <- "Shrines (AH)"
+rym[rym$Album == "Shrines" & rym$Artist == "Purity Ring",]$Album <- "Shrines (PR)"
+rymextra[rymextra$Album == "Shrines" & rymextra$Artist == "Armand Hammer",]$Album <- "Shrines (AH)"
+rymextra[rymextra$Album == "Shrines" & rymextra$Artist == "Purity Ring",]$Album <- "Shrines (PR)"
+```
+
+Also, lastfm has two albums named II. I am going to distinguish these into "TNGHT II" and "Meat Puppets II".
+
+```{r}
+lastfm[lastfm$Album == "II" & lastfm$Artist == "TNGHT",]$Album <- "TNGHT II"
+lastfm[lastfm$Album == "II" & lastfm$Artist == "Meat Puppets",]$Album <- "Meat Puppets II"
+```
+
+There are also a number of strange name changes and duplicate album names that show up later. I amend them here:
+
+```{r}
+lastfm[lastfm$Album == "Kamikaze" & lastfm$Artist == "Paul Rosenberg",]$Album <- "Kamikaze (PR)"
+lastfm[lastfm$Album == "밑",]$Artist <- "PANIC"
+lastfm[lastfm$Album == "사랑하기 때문에",]$Artist <- "Yoo Jae-Ha"
+lastfm[lastfm$Album == "2012",]$Artist <- "mukimukimanmansu"
+lastfm[lastfm$Album == "ALL BITCHES DIE",]$Artist <- "Lingua Ignota"
+lastfm[lastfm$Album == "CALIGULA",]$Artist <- "Lingua Ignota"
+lastfm[lastfm$Album == "Dark Lane Demo Tapes",]$Artist <- "Drake"
+lastfm[lastfm$Album == "Flower Boy",]$Artist <- "Tyler The Creator"
+lastfm[lastfm$Album == "Hi This Is Flume (Mixtape)",]$Artist <- "Flume"
+lastfm[lastfm$Album == "How can I",]$Artist <- "박혜진 Park Hye Jin"
+lastfm[lastfm$Album == "I LIE HERE BURIED WITH MY RINGS AND MY DRESSES",]$Artist <- "Backxwash"
+lastfm[lastfm$Album == "Joy as an Act of Resistance.",]$Artist <- "IDLES"
+lastfm[lastfm$Album == "Lifes Like",]$Artist <- "Jazzyfact"
+lastfm[lastfm$Album == "Max & Match",]$Artist <- "LOOΠΔ / ODD EYE CIRCLE"
+lastfm[lastfm$Album == "The Anecdote",]$Artist <- "E SENS"
+lastfm[lastfm$Album == "The College Dropout",]$Artist <- "Kanye West"
+lastfm[lastfm$Album == "Traveller" & lastfm$Artist == "Chris Stapleton",]$Album <- "Traveller (CS)"
+lastfm[lastfm$Album == "Ultra Mono",]$Artist <- "IDLES"
+lastfm[lastfm$Album == "Whole Lotta Red" & lastfm$Artist == "Mario Judah",]$Album <- "Whole Lotta Red (MJ)"
+lastfm[lastfm$Album == "Rodeo (expanded edition)",]$Artist <- "Travis Scott"
+lastfm[lastfm$Album == "Ummon",]$Artist <- "SLIFT"
+```
+
+Now, I will tidy the lastfm data. First, I want the date/time in a better format to work with. I'm going to save each of the date/times as a date datatype.
+
+```{r}
+mths = c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+lastfm %>% separate(DateTime,into=c("Day","Month","Year","Time"),sep=" ") %>% mutate(Month = match(Month,mths)) %>% mutate(Date = as.Date(str_c(Year,Month,Day,sep="-"))) %>% select(Artist,Album,Track,Date) -> lastfm
+```
+
+Taking a look at a histogram of this refactored Date variable, one can see that my lastfm cut out unexpectedly from around August 2020 to September 2020.
+
+```{r}
+lastfm %>% ggplot(aes(x=Date))+geom_histogram(binwidth = 7)
+```
+
+Anyway, I don't want all of this data, and I want it by album, so I will group by album and then save the number of times each track was played and a list containing the date and times they were played.
+
+```{r}
+lastfm %>% group_by(Artist,Album) %>% summarize(PlayCount=n(),PlayTimes=list(Date)) -> lastfm_wide
+```
+
+
+### Tidying: Reshaping
 
 If your datasets are tidy already, demonstrate that you can reshape data with pivot wider/longer here (e.g., untidy and then retidy). Alternatively, it may be easier to wait until the wrangling section so you can reshape your summary statistics. Note here if you are going to do this.
 
-```{R}
-# your tidying code (if applicable; can also wait until wrangling section)
+```{r}
+rymextra %>% pivot_longer(Genre1:Genre4,values_to = "Genre") %>% filter(!is.na(Genre)) -> rymextralong
+rymextralong %>% slice_head(n=10)
 ```
+
+I will do this sort of tidying when computing genre related statistics.
 
     
-#### Joining/Merging
+### Joining/Merging
+
+We want to join rym and rymextra together. They should theoretically completely agree on Artist and Album, namely Album. They're each 489 rows, with one row per album. I will check for any discrepancies between the album lists first.
 
 ```{R}
-# your joining code
-
-# your joining code
+rym$Album[!(rym$Album %in% rymextra$Album)]
+rymextra$Album[!(rymextra$Album %in% rym$Album)]
 ```
 
-Discussions of joining here. Feel encouraged to break up into more than once code chunk and discuss each in turn.
+You can see there are various spelling discrepancies. Since there are not *that* many, I've decided to go ahead and fix them manually in the code chunk below.
 
-####  Wrangling
+```{r}
+rymextra %>% mutate(Album = str_replace(Album,"Time -","Time:")) %>% mutate(Album = str_replace(Album,"Sawayama","SAWAYAMA")) %>% mutate(Album = str_replace(Album,"Kids See Ghosts","KIDS SEE GHOSTS")) %>% mutate(Album = str_replace(Album,"Jesus Is King","JESUS IS KING")) %>% mutate(Album = str_replace(Album,"Iridescence","iridescence")) %>% mutate(Album = str_replace(Album,"Chat-shire","Chat-Shire")) -> rymextra
+rym %>% mutate(Album=str_replace(Album,"Wide Awake","Wide Awake!")) %>% mutate(Album=str_replace(Album,"Damn.","DAMN.")) %>% mutate(Album=str_replace(Album,"Untitled Unmastered.","untitled unmastered.")) %>% mutate(Album=str_replace(Album,"Worry.","WORRY.")) %>% mutate(Album=str_replace(Album,"1000 Gecs","1000 gecs")) %>% mutate(Album=str_replace(Album,"No Love Deep Web","NO LOVE DEEP WEB")) %>% mutate(Album=str_replace(Album,"Fishmonger","fishmonger")) %>% mutate(Album=str_replace(Album,"&#34;Disco!&#34;","Disco!")) %>% mutate(Album=str_replace(Album,"Daytona","DAYTONA")) %>% mutate(Album=str_replace(Album,"Put Your Back n 2 It","Put Your Back N 2 It")) -> rym
+```
+
+The code has run, now:
 
 ```{R}
-# your wrangling code
-
-# your wrangling code
-
-# your wrangling code
+rym$Album[!(rym$Album %in% rymextra$Album)]
+rymextra$Album[!(rymextra$Album %in% rym$Album)]
 ```
 
-Your discussion of wrangling section here. Feel encouraged to break up into more than once code chunk and discuss each in turn.
+is empty. We are ready to join.
 
+```{r}
+full_join(rym,rymextra,by=c("Album")) -> rym_full
+rym_full %>% slice_head(n=10)
+nrow(rym_full)
+```
 
-#### Visualizing
+You can see our result is 489 rows long, which indicates that our join was smooth and successful.
+
+```{r}
+rym_full %>% filter(Artist.x != Artist.y) %>% select(Artist.x,Artist.y)
+```
+
+There is annoying collection of artist discrepancies which I will, once again, fix manually and discreetly.
+
+```{r}
+rym_full %>% mutate(Artist.x = str_replace(Artist.x,"100 Gecs","100 gecs")) %>% mutate(Artist.x = str_replace(Artist.x,"Underscores","underscores")) %>% mutate(Artist.x = str_replace(Artist.x,"At the Drive-In","At The Drive-In")) %>% mutate(Artist.x = str_replace(Artist.x,"The Kniφe","The Knife")) -> rym_full
+```
+
+```{r}
+rym_full %>% filter(Artist.x != Artist.y) %>% select(Artist.x,Artist.y)
+```
+
+rym_full still has weird discrepancies, but I've saved all of the preferred, Spotify consistent artist names to Artist.x, which I will make the main and only artist column.
+
+```{r}
+rym_full %>% rename(Artist = Artist.x) %>% select(-Artist.y) -> rym_full
+```
+
+Next up, we want to attach the lastfm data to rym_full. This is difficult because a lot of album names are not consistent across RYM and Spotify. As a result, I've manually made a CSV with the RYM and Spotify names for each album.
+
+```{r}
+namematch <- read.csv("~/project1/data/namematch.csv",stringsAsFactors = FALSE)
+namematch %>% glimpse()
+```
+
+To join lastfm to rym_full, I will first join namematch to rym_full, and then join lastfm_wide to the result.
+
+```{r}
+full_join(rym_full,namematch,by=c("Album"="RYM")) -> rym_full
+left_join(rym_full,lastfm_wide,by=c("LASTFM"="Album")) -> data_full
+data_full %>% select(Album,Artist.x,PlayCount) %>% slice_head(n=10)
+nrow(data_full)
+```
+
+I performed a left join here because I want to associate the lastfm data to the data that I have from RYM, not the other way around. Our resulting dataset has the same number of rows, 489, as our RYM dataset for this reason.
+
+###  Wrangling
+
+I will start with a little tidying of residue from that join that just happened.
 
 ```{R}
-# your plot 1
+data_full %>% rename(Artist = Artist.x) %>% select(-Artist.y,-RYM.Album,-LASTFM) -> data_full
+data_full %>% relocate(Artist) -> data_full
+data_full %>% select(Artist:PlayCount) %>% slice_head(n=10)
 ```
 
-Your discussion of plot 1
+Now, some summary statistics.
+
+There are 489 distinct albums in the dataset.
+
+##### Release Dates
+
+```{r}
+data_full %>% group_by(Release_Date) %>% summarize(n=n()) %>% arrange(desc(n)) %>% slice_head(n=10)
+```
+
+Most albums I have reviewed were released in 2020, with 2019 and 2018 coming in next. We may also want to see the frequency counts by decade.
+
+```{r}
+data_full %>% mutate(Decade = floor(Release_Date/10)*10) %>% group_by(Decade) %>% summarize(n=n()) %>% arrange(desc(n))
+```
+
+We can see that overall, most of the albums I have reviewed are from the 2010s by a slim margin. The 2020s are runner up, slowly overtaking the 2010s, with recent decades following in the rankings after that.
+
+##### Ratings
+
+Let's look at some ratings.
+
+```{r}
+data_full %>% summarize(mean(Rating),sd(Rating),median(Rating))
+```
+
+```{r}
+data_full %>% group_by(Rating) %>% summarize(n=n()) %>% ggplot(aes(x=Rating,y=n)) + geom_bar(stat="identity")
+```
+
+The average rating is 6.44, and the standard deviation of the ratings is 1.693. There is a fairly normal, slightly left-skewed distribution of ratings, with median at 7.
+
+##### Rating Dates
+
+```{r}
+data_full %>% group_by(YearRev) %>% summarize(n=n())
+```
+
+Most of the ratings were assigned during 2020, when I did an album a day challenge. This challenge wasn't really consistent though. The next frequency table shows that there was a lot of cramming done in December of 2020, where I made up all of the lost ground by listening to 66 albums in one month, barely bringing me up to the 366 days of that year.
+
+```{r}
+data_full %>% group_by(YearRev,MonthRev) %>% summarize(num=n()) %>% arrange(desc(num)) %>% slice_max(order_by=num)
+```
+
+```{r}
+data_full %>% group_by(YearRev, MonthRev, DayRev) %>% summarize(n=n()) %>% arrange(desc(n)) %>% ungroup() %>% slice_head(n=10)
+```
+
+The day frequencies reveal that I inputted a bunch of ratings on the day that I began this RYM account, which was 2019 November 18. Of the next highest frequencies, 4 of them are in December of 2020, reflecting the cramming that happened that month. 5 albums rated on Christmas!
+
+##### Album Length
+
+I'm going to want to deal with these times in a numerical format. We will need to do some refactoring. I am aware there is a cleaner way to do this, but for the requirement I will define a custom function to take each album length and turn it into a number in terms of minutes.
+
+```{r}
+conv_to_mins <- function(x){
+  splitx <- as.numeric(unlist(str_split(x,":")))
+  60*splitx[1]+splitx[2]+splitx[3]/60
+}
+conv_to_time <- function(x){
+  str_c(floor(x/60),":",formatC(floor(x%%60),1,flag="0",format="d"),":",formatC(round(60*(x %% 1)),1,flag="0",format="d"))
+}
+
+data_full %>% mutate(LengthNum = sapply(Length,conv_to_mins)) %>% summarize(TotalLength=conv_to_time(sum(LengthNum)),AvgLength=conv_to_time(mean(LengthNum)), MedianLength = conv_to_time(median(LengthNum)))
+```
+This album listening data constitutes 390 total hours of listening, with the average album being 47 minutes long, and the median album being 45 minutes long. 
+
+```{r}
+data_full %>% mutate(LengthNum = sapply(Length,conv_to_mins)) %>% arrange(desc(LengthNum)) %>% select(Artist,Album,Rating,Length,TrackNum,Genera,PlayCount) %>% slice_head(n=5)
+data_full %>% mutate(LengthNum = sapply(Length,conv_to_mins)) %>% arrange(LengthNum) %>% select(Artist,Album,Rating,Length,TrackNum,Genera,PlayCount) %>% slice_head(n=5)
+```
+
+The longest album I listened to was Kamasi Washington's The Epic, clocking in at a very long 2 hours 53 minutes. The shortest album I listened to was underscores' EP We Never Got Strawberry Cake, clocking in at just 9 minutes and 30 seconds.
+
+##### Track Number
+
+```{r}
+data_full %>% summarize(TotalTracks = sum(TrackNum), AvgTracks = mean(TrackNum), MedianTracks = median(TrackNum))
+```
+
+The albums in the dataset constitute a total of 5786 tracks. The average number of tracks per album is 11.83, and the median number of tracks per album is 11.
+
+```{r}
+data_full %>% ggplot(aes(x=TrackNum))+geom_histogram(binwidth = 1)
+```
+
+The distribution of track numbers has a huge spike at 11. Otherwise, it is fairly normal.
+
+##### Track Length
+
+I'm going to save the average track length of each album into a new column called TrackLength. I will do so by dividing the length of each album by the number of tracks.
+```{r}
+data_full %>% mutate(LengthNum = sapply(Length,conv_to_mins)) %>% mutate(TrackLength = conv_to_time(LengthNum/TrackNum)) %>% select(-LengthNum) -> data_full
+```
+
+Here are some summary statistics about average track length:
+```{r}
+data_full %>% mutate(LengthNum = sapply(Length,conv_to_mins), TrackLengthNum = sapply(TrackLength,conv_to_mins)) %>% summarize(AvgTrackLength = conv_to_time(sum(LengthNum)/sum(TrackNum)),AvgAvgTrackLength = conv_to_time(mean(TrackLengthNum)))
+```
+
+The average track length of all of these albums is 4 minutes 3 seconds. The average average track length of each album is 4 minutes and 42 seconds.
+
+```{r}
+data_full %>% mutate(TrackLengthNum = sapply(TrackLength,conv_to_mins)) %>% arrange(desc(TrackLengthNum)) %>% select(Artist,Album,Rating,Length,TrackNum,TrackLength,Genera,PlayCount) %>% slice_head(n=5)
+data_full %>% mutate(TrackLengthNum = sapply(TrackLength,conv_to_mins)) %>% arrange(TrackLengthNum) %>% select(Artist,Album,Rating,Length,TrackNum,TrackLength,Genera,PlayCount) %>% slice_head(n=5)
+```
+
+The album with the longest average track length is Steve Reich's Music for 18 Musicians, which consists of a single 58 minute track. The album with the longest average track length that doesn't just have one track is The Caretaker's Everywhere at the End of Time: Stage 5, which is 1 hour 28 minutes long and has 4 tracks. The album with the shortest average track length is Miasmatic Necrosis with Apex Profane, which clocks in at 21 minutes 58 seconds with 21 tracks, making each track barely longer than a minute on average.
+
+```{r}
+data_full %>% mutate(TrackLengthNum = sapply(TrackLength,conv_to_mins)) %>% ggplot(aes(x=TrackLengthNum)) + geom_histogram(binwidth = 1) + xlab("Average Track Length (mins)")
+data_full %>% mutate(TrackLengthNum = sapply(TrackLength,conv_to_mins)) %>% filter(TrackLengthNum<20) %>% ggplot(aes(x=TrackLengthNum)) + geom_histogram(binwidth = 0.1) + xlab("Average Track Length (mins)")
+```
+
+##### Generic Genre
+
+```{r}
+unique(data_full$Genera)
+```
+
+The albums are classified under 17 unique general genres.
+
+```{r}
+data_full %>% filter(Genera != "") %>% group_by(Genera) %>% summarize(Count = n()) %>% arrange(desc(Count))
+```
+
+The three most-listened-to generic genres are rock, hip hop, and pop. This makes sense, as these categories are the largest umbrellas, they include lots of things.
+
+We can do some grouping by these genres to get some summary statistics:
+
+```{r}
+data_full %>% filter(Genera != "") %>% group_by(Genera) %>% summarize(Count = n(), AvgRating = mean(Rating)) %>% arrange(desc(Count))
+```
+
+Some things of note. Out of the three big genres, Hip Hop has the highest average rating, and Pop has the lowest average rating. Folk has a very high average rating, and Electronic has a very low average rating. There are some higher or lower numbers further down the list, but that is due to low values of n.
+
+```{r}
+data_full %>% filter(Genera != "") %>% group_by(Genera) %>% summarize(Count = n(),AvgLength = conv_to_time(mean(sapply(Length,conv_to_mins))),AvgTrackNum = mean(TrackNum),AvgAvgTrackLength = conv_to_time(mean(sapply(TrackLength,conv_to_mins)))) %>% arrange(desc(Count))
+```
+
+Jazz and Ambient have abnormally high average average track lengths. To be expected. The hip hop albums I've listened to have very low average track lengths. 
+
+```{r}
+data_full %>% filter(Genera != "") %>% group_by(Genera) %>% summarize(Count = n(), AvgPlayCount = mean(PlayCount,na.rm=TRUE),TotPlayCount = sum(PlayCount,na.rm=TRUE)) %>% arrange(desc(Count))
+```
+
+I play hip hop and folk a lot.
+
+
+##### Specific Genre
+
+I want to pivot_longer the four genre columns so I can talk about individual genres.
+```{r}
+data_full %>% pivot_longer(Genre1:Genre4,values_to="Genre") %>% filter(!is.na(Genre)) -> data_full_long
+```
+
+```{r}
+data_full_long %>% summarize(unique(Genre)) %>% summarize(GenreCount = n())
+```
+
+There are 216 unique genres.
+
+```{r}
+data_full_long %>% group_by(Genre) %>% summarize(Count = n(), AvgRating = mean(Rating), SDRating = sd(Rating)) %>% 
+  arrange(desc(Count)) %>% slice_head(n=10)
+```
+
+Here you can see the top 10 genres among the albums in the data.
+
+```{r}
+data_full_long %>% group_by(Genre) %>% summarize(Count = n(), AvgRating = mean(Rating)) %>% 
+  arrange(desc(AvgRating)) %>% slice_head(n=10)
+```
+
+Ordering by average rating is not particularly interesting, so I will filter out genres with counts under 5.
+
+```{r}
+data_full_long %>% group_by(Genre) %>% summarize(Count = n(), AvgRating = mean(Rating)) %>% 
+  filter(Count>4) %>% arrange(desc(AvgRating)) %>% slice_head(n=10)
+```
+
+There are my top 10 favorite genres! 
+
+```{r}
+data_full_long %>% group_by(Genre) %>% summarize(Count = n(),AvgLength = conv_to_time(mean(sapply(Length,conv_to_mins))),AvgTrackNum = mean(TrackNum),AvgAvgTrackLength = conv_to_time(mean(sapply(TrackLength,conv_to_mins)))) %>% 
+  arrange(desc(AvgAvgTrackLength)) %>% slice_head(n=10)
+```
+
+Sorting these genres by largest average average track length gives us this table, which is very largely influenced by the Everywhere At The End of Time stages that we saw in the longest albums chart. Filtering out genres with a count less than 5 gives us:
+
+```{r}
+data_full_long %>% group_by(Genre) %>% summarize(Count = n(),AvgLength = conv_to_time(mean(sapply(Length,conv_to_mins))),AvgTrackNum = mean(TrackNum),AvgAvgTrackLength = conv_to_time(mean(sapply(TrackLength,conv_to_mins)))) %>% 
+  filter(Count > 4) %>% arrange(desc(AvgAvgTrackLength)) %>% slice_head(n=10)
+```
+
+The top two genres are from Everywhere at the End Of Time. Post-Rock, Dream Pop, and Avant-Garde Jazz making it to the top of this list makes a lot of sense, as they tend to be long genres.
+
+Doing the same for the shortest genres,
+
+```{r}
+data_full_long %>% group_by(Genre) %>% summarize(Count = n(),AvgLength = conv_to_time(mean(sapply(Length,conv_to_mins))),AvgTrackNum = mean(TrackNum),AvgAvgTrackLength = conv_to_time(mean(sapply(TrackLength,conv_to_mins)))) %>% 
+  arrange(AvgAvgTrackLength) %>% slice_head(n=5)
+```
+
+The unfiltered data is not particularly informative,
+
+```{r}
+data_full_long %>% group_by(Genre) %>% summarize(Count = n(),AvgLength = conv_to_time(mean(sapply(Length,conv_to_mins))),AvgTrackNum = mean(TrackNum),AvgAvgTrackLength = conv_to_time(mean(sapply(TrackLength,conv_to_mins)))) %>% 
+  filter(Count > 4) %>% arrange(AvgAvgTrackLength) %>% slice_head(n=10)
+```
+
+Here are our shortest genres. A lot of electronic and hip hop makes sense.
+
+```{r}
+data_full_long %>% group_by(Genre) %>% summarize(Count = n(), AvgPlayCount = mean(PlayCount,na.rm=TRUE),TotPlayCount = sum(PlayCount,na.rm=TRUE)) %>% 
+  filter(Count > 4) %>% arrange(desc(AvgPlayCount)) %>% slice_head(n=10)
+```
+
+Here's a chart of my most-played genres averaged by album.
+
+```{r}
+data_full_long %>% group_by(Genre) %>% summarize(Count = n(), AvgPlayCount = mean(PlayCount,na.rm=TRUE),TotPlayCount = sum(PlayCount,na.rm=TRUE)) %>% 
+  filter(Count > 4) %>% arrange(desc(TotPlayCount)) %>% slice_head(n=10)
+```
+
+And here's a chart of my truly most-played genres.
+
+```{r}
+data_full_long %>% group_by(Genre) %>% summarize(Count = n(), AvgRating = mean(Rating),AvgLength = conv_to_time(mean(sapply(Length,conv_to_mins))),AvgTrackNum = mean(TrackNum),AvgAvgTrackLength = conv_to_time(mean(sapply(TrackLength,conv_to_mins))), AvgPlayCount = mean(PlayCount,na.rm=TRUE),TotPlayCount = sum(PlayCount,na.rm=TRUE)) %>% 
+  arrange(desc(Count)) %>% slice_head(n=10)
+```
+
+##### Play Count
+
+```{r}
+data_full %>% summarize(AvgPlayCount = mean(PlayCount,na.rm=TRUE),MedianPlayCount = median(PlayCount,na.rm=TRUE))
+```
+On average, each album got played 54.5087 times, and the median number of times an album was played was 34.
+
+```{r}
+data_full %>% arrange(desc(PlayCount)) %>% select(Artist,Album,Rating,TrackNum,Genera,PlayCount) %>% slice_head(n=10)
+```
+These are the 10 albums played the most. The album I have played the most is J Dilla's Donuts, with 509 plays over lastfm's time period.
+
+I am now going to construct a table with some play history that I got from my lastfm data. The history column of this table contains a histogram that shows the number of times I played each album over each month.
+
+```{r}
+playdata <- data_full %>% arrange(desc(PlayCount)) %>% select(Artist,Album,Rating,PlayCount,PlayTimes) %>% slice_head(n=20)
+coolplot <- data.frame(playdata %>% select(-PlayTimes),History= "")
+coolplot %>% kbl(booktabs=TRUE, align=rep('c', 5),col.names = c("Artist","Album","Rating","PlayCount","Month by Month Play History")) %>% kable_paper(full_width = FALSE) %>%
+    column_spec(1,width="100px") %>%
+    column_spec(2,width="100px") %>%
+    column_spec(3,color = "white",background=spec_color(playdata$Rating,begin=0.3,end=0.6)) %>%
+    column_spec(5,width="700px",image=spec_hist(playdata$PlayTimes,breaks=floor((sapply(playdata$PlayTimes,max) - sapply(playdata$PlayTimes,min))/30),same_lim=TRUE,height = 100,width=800,xaxt="y"))
+```
+
+### Visualizing
+
+```{r}
+library(ggthemes)
+```
+
 
 ```{R}
-# your plot 2
+generaother <- function(x){
+  if(x %in% c("Rock","Hip Hop","Pop","Electronic","Folk")){
+    x
+  }
+  else{
+    "Other"
+  }
+}
+
+data_full %>% mutate(Genera = sapply(Genera,generaother)) %>% 
+  mutate(Genera = factor(Genera,levels=c("Rock","Hip Hop","Pop","Electronic","Folk","Other"))) %>%
+    ggplot(aes(x=Rating,fill=Genera)) + 
+    geom_histogram(aes(y=..density..),binwidth = 1) +
+    facet_wrap(vars(Genera),nrow = 3) +
+    scale_x_continuous(breaks=1:10) + 
+    scale_y_continuous(limits=c(-0.01,0.3)) +
+    labs(title = "Scaled Histograms of Rating per Genre",
+         x = "Rating",
+         y = "Density") +
+  
+  
+    theme_hc()+ scale_fill_brewer(palette="Pastel2")+
+    theme(plot.background = element_rect(fill="black"),
+          plot.title = element_text(size=rel(1.5),color = "white",face="bold",hjust = 0.5),
+          axis.text = element_text(size = rel(0.8), colour = "white"),
+          axis.title.x = element_text(colour = "white",face="bold"),
+          axis.title.y = element_text(colour = "white",face="bold"),
+          strip.background = element_rect(fill = "black"),
+          strip.text = element_text(colour = 'white',face = "bold"),
+          legend.position = "none"
+    )
 ```
 
-Your discussion of plot 2
+This first plot depicts density-based histograms of ratings split up by generic genre. As a result, we can see the various rating distributions across genres. some observations: Rock is the most spread out genre, with a lot of variability in the rating that a rock album may receive. Hip hop, pop, and electronic have fairly narrow distributions, with each genre having a clear mode of around 3 rating values. Folk is easily the highest rated out of these categories, with not a single folk album getting a rating under 5. 
 
 ```{R}
-# your plot 3
+data_full %>% 
+  mutate(Genera = sapply(Genera,generaother)) %>% 
+  mutate(Genera = factor(Genera,levels=c("Rock","Hip Hop","Pop","Electronic","Folk","Other")))%>% 
+  mutate(TrackLengthNum = sapply(TrackLength,conv_to_mins)) %>%
+  
+    ggplot(aes(x=log(TrackLengthNum),y=Rating,color=Genera)) + 
+    geom_smooth(method = "lm", fill = NA) +
+    geom_point()+
+    scale_x_continuous(breaks = log(c(1,2,4,8,16,32,64,128)),labels = c(1,2,4,8,16,32,64,128)) +
+    scale_y_continuous(breaks = 1:10) +
+    labs(title = "Rating vs Log of Average Track Length",
+          x="Average Track Length in Minutes"
+         ) +
+  
+  
+  theme_hc()+ scale_color_brewer(palette="Pastel2")+
+    theme(plot.background = element_rect(fill="black"),
+          plot.title = element_text(size=rel(1.5),color = "white",face="bold",hjust = 0.5),
+          axis.text = element_text(size = rel(0.8), colour = "white"),
+          axis.title.x = element_text(colour = "white",face="bold"),
+          axis.title.y = element_text(colour = "white",face="bold"),
+          strip.background = element_rect(fill = "black"),
+          strip.text = element_text(colour = 'white',face = "bold"),
+          legend.background = element_rect(fill = "black"),
+          legend.title = element_text(color = "white"),
+          legend.text = element_text(color = "white")
+    )
 ```
 
-Your discussion of plot 3
+For a little bit of a fun plot, I decided to plot Rating vs the Average Track Length of each album to """test""" my hypothesis that I enjoy longer songs. Average track length is not distributed very uniformly, so I decided to scale it using a natural log, which has helped the scale a lot. I then colored each dot by its generic genre and fit linear models (which are of course, not linear but logarithmic) to the scaled data for each genre, which you can see on the graph. All of the linear models ended up with a positive correlation save the electronic line, which had a relatively very steep decline. Interesting. The trend is probably a result of random noise and low sample size, but perhaps I dislike long electronic tracks and long electronic tracks only.
 
-#### Concluding Remarks
+```{R}
+data_full %>% 
+  mutate(TrackLengthNum = sapply(TrackLength,conv_to_mins)) %>%
+  
+  ggplot(aes(y=log(PlayCount),x=log(TrackLengthNum),color=Rating)) +
+    geom_smooth(method = "lm", fill = NA, color = "#cf788d") +
+    geom_point() +
+  
+  labs(
+    title = "Log of Play Count vs Log of Average Track Length",
+    x = "Average Length of Track (min)",
+    y = "Number of Times Played"
+  ) + 
+  
+  scale_x_continuous(breaks = log(c(1,2,4,8,16,32,64,128,256)),labels = c(1,2,4,8,16,32,64,128,256)) +
+  scale_y_continuous(breaks = log(c(1,2,4,8,16,32,64,128)),labels = c(1,2,4,8,16,32,64,128)) +
 
-If any!
+  theme_hc()+scale_colour_gradient(
+    high = "#bafaff",low=#6f9ca1
+  )+
+    theme(plot.background = element_rect(fill="black"),
+          plot.title = element_text(size=rel(1.5),color = "white",face="bold",hjust = 0.5),
+          axis.text = element_text(size = rel(0.8), colour = "white"),
+          axis.title.x = element_text(colour = "white",face="bold"),
+          axis.title.y = element_text(colour = "white",face="bold"),
+          strip.background = element_rect(fill = "black"),
+          strip.text = element_text(colour = 'white',face = "bold"),
+          legend.background = element_rect(fill = "black"),
+          legend.title = element_text(color = "white"),
+          legend.text = element_text(color = "white")
+    )
+```
+
+Here I have a plot of log scaled Play Count vs log scaled Average Track Length. You can see a nice negative correlation (for which I overlaid a trendline), which makes sense considering longer tracks are played less often by virtue of them taking more time. I also colored the data by the rating that I gave the album each track is on, which beautifully shows the reality that I listen to music that I rated highly more than I listen to music that I rated low.
+
+```{r}
+topgenres <- unlist(data_full_long %>% group_by(Genre) %>% summarize(Count = n()) %>% arrange(desc(Count)) %>% slice_head(n=17) %>% select(Genre))
+
+data_full_long %>% 
+  filter(Genre %in% topgenres) %>% 
+  mutate(Genre = factor(Genre,topgenres)) %>%
+  
+  ggplot(aes(x=Genre,y=Rating)) +
+    geom_bar(stat = "summary", fun = mean,fill = "#99d199") +
+    geom_errorbar(stat="summary",color = "#997509",size=2,width = 0.5) +
+  
+  coord_cartesian(ylim=c(4.5,8.5)) +
+  
+  labs(
+    title = "Average Rating for Top 17 Genres",
+    y="Average Rating"
+  ) + 
+  
+  theme_hc()+
+  theme(plot.background = element_rect(fill="black"),
+          plot.title = element_text(size=rel(1.5),color = "white",face="bold",hjust = 0.5),
+          axis.text = element_text(size = rel(0.8), colour = "white"),
+          axis.text.x = element_text(angle = 60, vjust = 1, hjust=1),
+          axis.title.x = element_text(colour = "white",face="bold"),
+          axis.title.y = element_text(colour = "white",face="bold"),
+          strip.background = element_rect(fill = "black"),
+          strip.text = element_text(colour = 'white',face = "bold"),
+          legend.background = element_rect(fill = "black"),
+          legend.title = element_text(color = "white"),
+          legend.text = element_text(color = "white")
+    )
+```
+
+This plot shows the average rating of albums for each of the top 17 most listened to genres from most listened to least listened order. It also includes error bars for each of these averages calculated by finding the standard error. One can easily see which of the popular genres have high average rating, Experimental Hip Hop and Experimental Rock particularly stick out, as well as which genres have high variability: Pop Rap, Alternative Rock, Conscious Hip Hop, and Electropop.
+
+### Concluding Remarks
+
+I got really ambitious with this project. The datasets are very large, and I had a hard time organizing and displaying summary statistics without overloading everything as a result. lastfm has 25,418 observations! If you look through you will see select() and slice_head() on every single display statement. Anyway, I'm pretty happy with how this turned out. This is personal data, so it actually means something to me.
 
 
 

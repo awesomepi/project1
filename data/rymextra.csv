@@ -1,0 +1,1327 @@
+Artist,Album,DateReviewed,Length,TrackNum,Genera,Genres
+"Richard Dawson","Peasant","20,1,2","0:58:46","11","Folk","Progressive Folk, Avant-Folk"
+"Richard Dawson","2020","20,1,2","0:57:53","10","Folk","Art Rock, Singer/Songwriter"
+"The Beatles","Abbey Road","20,1,2","0:47:31","17","Pop","Pop Rock"
+"The Beach Boys","Pet Sounds","20,1,3","0:35:01","13","Pop","Baroque Pop"
+"Lil Darkie","This Does Not Exist","20,1,3","0:42:41","13","Hip Hop","Experimental Hip Hop"
+"Flume","Hi This Is Flume","20,1,4","0:38:10","17","Electronic","Wonky"
+"Stice","Here Come the Baton","20,1,6","0:21:13","12","Electronic","Digital Hardcore, Experimental Hip Hop"
+"Nick Drake","Five Leaves Left","20,1,6","0:39:33","10","Folk","Singer/Songwriter, Chamber Folk, Contemporary Folk"
+"Arcade Fire","Funeral","20,1,7","0:47:56","10","Pop","Indie Rock, Chamber Pop"
+"We Are Only Human Once","Fox","20,1,8","0:19:14","11","Rock","Noise Pop, Lo-Fi Indie"
+"♥ GOJII ♥","Wishing Star","20,1,11","0:22:43","6","Electronic","Kawaii Future Bass"
+"Nick Drake","Bryter Layter","20,1,11","0:39:31","10","Folk","Singer/Songwriter, Chamber Folk, Contemporary Folk"
+"Frank Ocean","channel ORANGE","20,1,12","0:55:51","17","R&B","Alternative R&B, Contemporary R&B"
+"Georgia","Seeking Thrills","20,1,12","0:49:19","13","Pop","Synthpop, Electropop"
+"Monsune","Tradition","20,1,14","0:19:02","5","R&B","Contemporary R&B"
+"The Beatles","Revolver","20,1,14","0:34:46","14","Pop","Pop Rock, Psychedelic Pop"
+"Neutral Milk Hotel","In the Aeroplane Over the Sea","20,1,14","0:39:51","11","Rock","Indie Folk, Indie Rock"
+"Matana Roberts","Coin Coin Chapter Four: Memphis","20,1,19","0:46:45","14","Jazz","Avant-Garde Jazz, Free Jazz"
+"Underscores","Character Development!","20,1,19","0:09:47","3","Electronic","Glitch Pop, Future Bass"
+"Poppy","I Disagree","20,1,19","0:35:08","10","Rock","Alternative Metal"
+"Selena Gomez","Rare","20,1,20","0:41:53","13","R&B","Contemporary R&B, Dance-Pop, Electropop"
+"Alexandra Savior","The Archer","20,1,22","0:30:25","10","Pop","Psychedelic Pop, Indie Pop"
+"Dope Body","Natural History","20,1,22","0:36:16","9","Rock","Noise Rock, Post-Hardcore"
+"Corey Feldman","Angelic 2 the Core","20,1,23","1:35:07","23","Pop","Dance-Pop, Pop Rock, Electropop"
+"Mac Miller","Circles","20,1,24","0:48:39","12","Soul","Neo-Soul"
+"Tame Impala","Currents","20,1,24","0:51:06","13","Pop","Psychedelic Pop, Synthpop, Neo-Psychedelia"
+"Kamasi Washington","The Epic","20,1,27","2:53:33","21","Jazz","Spiritual Jazz"
+"Eminem","Music to Be Murdered By","20,1,27","1:04:22","20","Hip Hop","Pop Rap, Trap"
+"Pusha T","DAYTONA","20,1,27","0:21:10","7","Hip Hop","Hardcore Hip Hop, Southern Hip Hop"
+"Ariel Pink","Pom Pom","20,1,28","1:07:26","17","Pop","Hypnagogic Pop, Psychedelic Pop"
+"Billie Eilish","When We All Fall Asleep, Where Do We Go?","20,2,1","0:42:48","14","Pop","Electropop, Alternative R&B"
+"Sewerslvt","Draining Love Story","20,2,2","0:58:33","10","Electronic","Atmospheric Drum and Bass"
+"Dan Deacon","Mystic Familiar","20,2,5","0:43:39","11","Electronic","Neo-Psychedelia, Indietronica"
+"Car Seat Headrest","Twin Fantasy","20,2,7","1:11:20","10","Rock","Indie Rock"
+"Tim Hecker","Ravedeath, 1972","20,2,9","0:52:23","12","Noise","Ambient, Drone"
+"Red Hot Chili Peppers","Blood Sugar Sex Magik","20,2,9","1:14:21","17","Rock","Funk Rock, Alternative Rock"
+"Alon Mor","Lands of Delight","20,2,9","0:37:26","7","Electronic","Electronic, Experimental"
+"Portal","ION","20,2,9","0:36:56","9","Rock","Technical Death Metal"
+"Andy Shauf","The Neon Skyline","20,2,9","0:34:55","11","Pop","Chamber Pop, Singer/Songwriter, Indie Pop"
+"HMLTD","West of Eden","20,2,10","0:49:14","15","Rock","Glam Punk, Art Pop, Art Rock"
+"Against All Logic","2017 - 2019","20,2,11","0:45:22","9","Electronic","Tech House, Post-Industrial"
+"Destroyer","Kaputt","20,2,12","0:50:09","9","Pop","Sophisti-Pop, Art Pop"
+"J. Cole","2014 Forest Hills Drive","20,2,16","1:04:40","13","Hip Hop","Conscious Hip Hop"
+"Tame Impala","The Slow Rush","20,2,19","0:57:19","12","Pop","Psychedelic Pop, Synthpop, Neo-Psychedelia"
+"Denzel Curry x Kenny Beats","Unlocked","20,2,19","0:17:47","8","Hip Hop","Hardcore Hip Hop, Southern Hip Hop"
+"The KniÏ†e","Shaking the Habitual","20,2,20","1:36:20","13","Electronic","Electronic, Experimental"
+"Joy Division","Closer","20,2,21","0:44:14","9","Rock","Post-Punk"
+"Destroyer","Have We Met","20,2,24","0:42:11","10","Pop","Synthpop, Art Pop"
+"King Krule","Man Alive!","20,2,25","0:41:45","14","Rock","Art Rock, Post-Punk"
+"Badflower","OK, I'm Sick","20,2,26","0:55:28","13","Rock","Alternative Rock"
+"Grateful Dead","Terrapin Station","20,2,27","0:35:41","6","Rock","Roots Rock, Southern Rock"
+"BTS","Map of the Soul: 7","20,2,28","1:14:52","20","Pop","K-Pop"
+"Nujabes","Modal Soul","20,2,29","1:03:24","14","Hip Hop","Jazz Rap, Instrumental Hip Hop"
+"Nas","Illmatic","20,3,4","0:39:44","10","Hip Hop","East Coast Hip Hop, Boom Bap, Hardcore Hip Hop"
+"Deafhaven","Sunbather","20,3,4","0:59:54","7","Pop","Blackgaze, Post-Metal"
+"100 gecs","1000 gecs","20,3,4","0:23:00","10","Pop","Bubblegum Bass"
+"Soccer Mommy","Color Theory","20,3,6","0:44:08","10","Pop","Indie Pop, Singer/Songwriter"
+"Radiohead","In Rainbows","20,3,6","0:42:38","10","Rock","Art Rock, Alternative Rock"
+"Apocalyptica","Cell-0","20,3,7","0:53:36","9","Rock","Symphonic Metal"
+"Talk Talk","Laughing Stock","20,3,10","0:42:44","6","Rock","Post-Rock"
+"Moses Sumney","Græ: Part 1","20,3,11","0:38:15","12","Pop","Art Pop"
+"Altar of Plagues","Teethed Glory and Injury","20,3,13","0:47:58","9","Rock","Atmospheric Black Metal, Post-Metal"
+"Swans","Filth","20,3,13","0:36:43","9","Rock","Noise Rock, No Wave"
+"Swans","Cop","20,3,15","0:40:42","8","Rock","Noise Rock, No Wave"
+"Miles Davis","Kind of Blue","20,3,16","0:45:05","5","Jazz","Modal Jazz, Cool Jazz"
+"Pixies","Doolittle","20,3,17","0:38:36","15","Rock","Alternative Rock, Indie Rock"
+"Swans","Greed","20,3,17","0:37:34","7","Rock","No Wave, Noise Rock, Post-Industrial"
+"Mingus","The Black Saint and the Sinner Lady","20,3,17","0:37:37","4","Jazz","Avant-Garde Jazz, Third Stream"
+"Death Grips","The Powers That B","20,3,18","1:20:38","18","Hip Hop","Experimental Hip Hop, Industrial Hip Hop, Glitch Hop"
+"Porridge Radio","Every Bad","20,3,19","0:41:36","11","Rock","Indie Rock, Post-Punk"
+"Jay Electronica","A Written Testimony","20,3,21","0:39:34","10","Hip Hop","Conscious Hip Hop, Abstract Hip Hop"
+"Swans","Children of God","20,3,22","1:09:37","13","Rock","Experimental Rock, Post-Punk"
+"Lil Uzi Vert","Eternal Atake","20,3,23","1:02:04","18","Hip Hop","Trap, Pop Rap"
+"My Bloody Valentine","Loveless","20,3,24","0:48:31","11","Pop","Shoegaze, Noise Pop"
+"Cindy Lee","What's Tonight to Eternity","20,3,26","0:42:04","9","Pop","Hypnagogic Pop"
+"Playboi Carti","Die Lit","20,3,27","0:57:48","19","Hip Hop","Trap, Cloud Rap, Southern Hip Hop"
+"Godspeed You Black Emperor!","Lift Yr. Skinny Fists Like Antennas to Heaven!","20,3,28","1:27:21","4","Rock","Post-Rock"
+"Dua Lipa","Future Nostalgia","20,3,28","0:37:17","11","Pop","Dance-Pop, Nu-Disco"
+"Swans","Body to Body Job to Job","20,3,29","1:04:42","16","Rock","Noise Rock, No Wave, Industrial"
+"Brockhampton","Saturation II","20,4,1","0:48:04","16","Hip Hop","Pop Rap, West Coast Hip Hop"
+"Baxter Dury","The Night Chancers","20,4,3","0:30:24","10","Pop","Synthpop, Chamber Pop"
+"tricot","真っ黒 (Makkuro)","20,4,4","0:42:02","12","Rock","Math Rock"
+"Purity Ring","Shrines","20,4,4","0:38:21","11","Pop","Synthpop"
+"Tim Hecker","Haunt Me, Haunt Me Do It Again","20,4,4","0:53:51","20","Ambient","Ambient"
+"Joyner Lucas","ADHD","20,4,5","1:00:02","18","Hip Hop","Trap, Pop Rap, East Coast Hip Hop"
+"Godspeed You Black Emperor!","F♯A♯∞","20,4,7","1:03:25","3","Rock","Post-Rock"
+"Nirvana","Nevermind","20,4,8","0:49:20","13","Rock","Grunge, Alternative Rock"
+"Brockhampton","Saturation III","20,4,8","0:46:16","15","Hip Hop","Pop Rap, West Coast Hip Hop"
+"slowthai","Nothing Great About Britain","20,4,10","0:32:33","11","Hip Hop","UK Hip Hop"
+"The Strokes","The New Abnormal","20,4,13","0:45:08","9","Rock","Indie Rock"
+"Bill Fay","Countless Branches","20,4,13","0:26:51","10","Folk","Singer/Songwriter, Contemporary Folk"
+"Swans","Holy Money","20,4,15","0:36:00","7","Rock","Noise Rock, No Wave, Industrial Rock"
+"Yves Tumor","Heaven to a Tortured Mind","20,4,16","0:36:22","12","Rock","Neo-Psychedelia, Art Rock"
+"The Knife","Silent Shout","20,4,17","0:48:35","11","Pop","Electropop, Synthpop, Tech House"
+"Fiona Apple","Fetch the Bolt Cutters","20,4,17","0:51:49","13","Pop","Art Pop, Singer/Songwriter, Progressive Pop"
+"Talking Heads","Remain in Light","20,4,20","0:39:48","8","Rock","New Wave, Post-Punk"
+"Drake","Dark Lane Demo Tapes","20,5,3","0:49:55","14","Hip Hop","Pop Rap, Trap"
+"Rina Sawayama","Sawayama","20,5,2","0:43:34","13","Pop","Contemporary R&B, Dance-Pop"
+"Brockhampton","Ginger","20,5,2","0:44:17","12","Hip Hop","Pop Rap, West Coast Hip Hop"
+"Brockhampton","Iridescence","20,5,2","0:48:44","15","Hip Hop","Experimental Hip Hop, Hardcore Hip Hop"
+"Fiona Apple","When the Pawn","20,5,1","0:42:37","10","Pop","Singer/Songwriter, Piano Rock"
+"Flying Lotus","Cosmogramma","20,4,27","0:45:47","17","Electronic","IDM, Glitch Hop"
+"Enter Shikari","Nothing Is True & Everything Is Possible","20,4,26","0:43:50","15","Rock","Alternative Rock, Art Rock"
+"Black Dresses","Peaceful as Hell","20,4,21","0:46:33","15","Rock","Electro-Industrial, Industrial Rock"
+"Tom Waits","Swordfishtrombones","20,5,7","0:41:43","15","Rock","Singer/Songwriter, Experimental Rock"
+"Tom Waits","Rain Dogs","20,5,11","0:53:49","19","Rock","Singer/Songwriter, Experimental Rock"
+"Captain Beefheart & His Magic Band","Trout Mask Replica","20,5,11","1:18:19","28","Rock","Experimental Rock"
+"Blake Mills","Mutable Set","20,5,17","0:51:25","11","Folk","Chamber Folk, Singer/Songwriter"
+"Car Seat Headrest","Making a Door Less Open","20,5,16","0:47:28","11","Rock","Indietronica, Indie Rock"
+"Charli XCX","How I'm Feeling Now","20,5,15","0:37:00","11","Pop","Bubblegum Bass, Electropop"
+"Buena Vista Social Club","Buena Vista Social Club","20,5,13","0:59:43","14","Latin American Music","Son Cubano, Bolero, Afro-Cuban Jazz"
+"Sigur Rós","Ágætis byrjun","20,5,19","1:12:09","10","Rock","Post-Rock"
+"David Bowie","The Rise and Fall of Ziggy Stardust and the Spiders From Mars","20,5,19","0:38:29","11","Rock","Glam Rock, Pop Rock"
+"Perfume Genius","Set My Heart on Fire Immediately","20,5,18","0:50:35","13","Pop","Art Pop"
+"Swans","White Light From the Mouth of Infinity","20,5,18","1:07:56","12","Rock","Gothic Rock, Post-Punk"
+"무키무키만만수 [Mukimukimanmansu]","2012","20,5,21","0:31:00","12","Folk","Freak Folk"
+"Kanye West","The College Dropout","20,5,21","1:16:13","21","Hip Hop","Hip Hop, Pop Rap"
+"The Knife","Deep Cuts","20,5,20","0:44:49","14","Pop","Electropop, Synthpop"
+"Carly Rae Jepsen","E·MO·TION","20,5,20","1:05:13","18","Pop","Dance-Pop, Synthpop"
+"Kanye West","Late Registration","20,5,22","1:09:57","21","Hip Hop","Hip Hop"
+"black midi","Schlagenheim","20,5,22","0:43:10","9","Rock","Noise Rock, Math Rock, Experimental Rock"
+"JAY Z & Kanye West","Watch the Throne","20,5,24","0:46:13","12","Hip Hop","Hip Hop"
+"Kanye West","808s & Heartbreak","20,5,23","0:52:05","12","Pop","Electropop, Synthpop, Contemporary R&B"
+"The 1975","Notes on a Conditional Form","20,5,27","1:20:30","22","Pop","Electronic, Art Pop, Pop Rock"
+"Kanye West","Yeezus","20,5,27","0:40:06","10","Hip Hop","Experimental Hip Hop"
+"Have a Nice Life","Deathconsciousness","20,5,26","1:25:04","13","Rock","Post-Punk, Shoegaze"
+"Death Grips","Bottomless Pit","20,5,25","0:39:20","13","Hip Hop","Industrial Hip Hop, Abstract Hip Hop, Experimental Hip Hop"
+"Can","Tago Mago","20,5,24","1:13:15","7","Rock","Krautrock, Psychedelic Rock, Experimental Rock"
+"Beach House","Teen Dream","20,5,24","0:49:12","10","Pop","Dream Pop, Indie Pop"
+"Kanye West","The Life of Pablo","20,5,29","0:58:03","18","Hip Hop","Pop Rap, Hip Hop"
+"Wire","Pink Flag","20,5,28","0:35:19","21","Rock","Punk Rock, Art Punk"
+"Run the Jewels","RTJ4","20,6,4","0:38:57","11","Hip Hop","Hardcore Hip Hop, Political Hip Hop, Conscious Hip Hop"
+"DJ Shadow","Endtroducing.....","20,6,2","1:03:24","13","Hip Hop","Instrumental Hip Hop, Experimental Hip Hop, Plunderphonics"
+"The Soft Pink Truth","Shall We Go On Sinning So That Grace May Increase?","20,6,1","0:43:27","9","Ambient","Ambient, Ambient Techno"
+"Wingnut Dishwashers Union","Burn the Earth! Leave It Behind!","20,5,31","0:28:50","10","Folk","Folk Punk"
+"Fleetwood Mac","Rumours","20,5,31","0:39:05","11","Rock","Pop Rock, Soft Rock"
+"Kanye West","ye","20,5,30","0:23:41","7","","Pop Rap"
+"Stevie Wonder","Songs in the Key of Life","20,5,29","1:44:38","21","Soul","Soul"
+"J Dilla","Donuts","20,6,8","0:43:21","31","Hip Hop","Instrumental Hip Hop"
+"Wu-Tang Clan","Enter the Wu-Tang (36 Chambers)","20,6,6","0:58:23","12","Hip Hop","East Coast Hip Hop, Boom Bap, Hardcore Hip Hop"
+"Sweet Trip","Velocity : Design : Comfort","20,6,14","1:13:41","12","","Glitch Pop, IDM, Shoegaze"
+"Panda Bear","Person Pitch","20,6,11","0:45:36","7","Pop","Psychedelic Pop, Neo-Psychedelia, Plunderphonics"
+"John Coltrane","Giant Steps","20,6,11","0:37:03","7","Jazz","Hard Bop"
+"The Roots","Game Theory","20,6,10","0:47:01","13","Hip Hop","East Coast Hip Hop, Hardcore Hip Hop"
+"Freddie Gibbs & Madlib","Bandana","20,6,9","0:46:17","15","Hip Hop","Gangsta Rap"
+"Dinosaur","You're Living All Over Me","20,6,9","0:35:37","9","Rock","Noise Rock, Indie Rock, Alternative Rock"
+"Kraftwerk","Die Mensch-Maschine","20,6,29","0:36:13","6","Electronic","Synthpop, Electronic"
+"Haim","Women in Music Pt. III","20,6,29","0:51:39","16","Pop","Indie Pop, Soft Rock"
+"Slint","Spiderland","20,6,28","0:39:31","6","Rock","Post-Rock, Math Rock, Post-Hardcore"
+"Loathe","I Let It In and It Took Everything","20,6,28","0:49:14","14","Rock","Alternative Metal, Metalcore"
+"Weezer","Weezer [Blue Album]","20,6,28","0:41:25","10","Rock","Power Pop, Alternative Rock"
+"언니네이발관","가장 보통의 존재","20,6,27","0:43:41","10","Rock","Pop Rock, Indie Rock"
+"Machine Girl","U-Void Synthesizer","20,6,27","0:32:27","11","Electronic","Digital Hardcore"
+"Massive Attack","Mezzanine","20,6,26","1:03:26","11","Electronic","Trip Hop"
+"Pere Ubu","The Modern Dance","20,6,26","0:36:37","10","Rock","Post-Punk, Art Punk"
+"MIKE","Weight of the World","20,6,26","0:35:01","16","Hip Hop","East Coast Hip Hop"
+"N.W.A","Straight Outta Compton","20,6,25","0:48:27","10","Hip Hop","Gangsta Rap, West Coast Hip Hop"
+"King Gizzard and the Lizard Wizard","Infest the Rats' Nest","20,6,25","0:34:51","9","Rock","Stoner Metal, Thrash Metal"
+"Orchid","Dance Tonight! Revolution Tomorrow!","20,7,16","0:15:38","10","Rock","Emoviolence"
+"Modest Mouse","The Lonesome Crowded West","20,7,15","1:13:50","15","Rock","Indie Rock"
+"The Avalanches","Since I Left You","20,7,14","1:01:30","18","Electronic","Plunderphonics, Dance"
+"The Strokes","Is This It","20,7,11","0:36:19","11","Rock","Indie Rock, Garage Rock Revival"
+"Modest Mouse","This Is a Long Drive for Someone With Nothing to Think About","20,7,8","1:13:55","16","Rock","Indie Rock"
+"Janelle Monáe","Dirty Computer","20,7,3","0:48:41","14","Pop","Contemporary R&B, Art Pop"
+"Alex G","Trick","20,7,1","0:31:39","13","Rock","Lo-Fi Indie, Singer/Songwriter"
+"Sonic Youth","Daydream Nation","20,7,1","1:10:41","14","Rock","Noise Rock, Alternative Rock"
+"박혜진 [Park Hye Jin]","How Can I","20,6,30","0:22:18","6","Electronic","Outsider House"
+"Steve Reich","Music for 18 Musicians","20,6,30","0:58:55","1","Classical","Minimalism"
+"Elliott Smith","Either / Or","20,9,18","0:36:52","12","Folk","Singer/Songwriter, Indie Folk"
+"Chick Corea and Return to Forever","Light as a Feather","20,9,12","0:42:37","6","Jazz","Jazz Fusion"
+"Daft Punk","Discovery","20,9,11","1:00:31","14","Electronic","French House"
+"Xiu Xiu","A Promise","20,9,11","0:38:52","10","Electronic","Electronic, Experimental, Post-Industrial"
+"A Tribe Called Quest","Midnight Marauders","20,9,9","0:51:12","14","Hip Hop","East Coast Hip Hop, Jazz Rap, Boom Bap"
+"Slowdive","Souvlaki","20,9,6","0:40:48","10","Pop","Dream Pop, Shoegaze"
+"St. Vincent","Masseduction","20,8,31","0:41:36","13","Pop","Art Pop"
+"The Microphones","The Glow Pt. 2","20,8,27","1:06:10","20","Folk","Indie Folk, Psychedelic Folk, Lo-Fi / Slacker Rock"
+"Björk","Vespertine","20,8,27","0:55:39","12","Pop","Art Pop, Electronic"
+"Metallica","Ride the Lightning","20,8,25","0:47:20","8","Rock","Thrash Metal"
+"Taylor Swift","Folklore","20,8,15","1:03:38","16","Folk","Singer/Songwriter, Folk Pop"
+"Minutemen","Double Nickels on the Dime","20,8,13","1:19:14","45","Rock","Post-Punk, Art Punk, Punk Rock"
+"Arcade Fire","The Suburbs","20,8,2","1:03:55","16","Rock","Indie Rock"
+"Vampire Weekend","Modern Vampires of the City","20,7,28","0:43:01","12","Pop","Indie Pop"
+"Parliament","Mothership Connection","20,7,17","0:38:19","7","Funk","P-Funk"
+"Peter Cat Recording Co.","Bismillah","20,7,16","0:50:50","10","Pop","Jazz Pop"
+"Armand Hammer","Shrines","20,7,16","0:43:13","14","Hip Hop","Abstract Hip Hop, East Coast Hip Hop"
+"Glass Beach","The First Glass Beach Album","20,9,26","0:59:19","15","Rock","Indie Rock, Power Pop, Art Rock"
+"Death","Symbolic","20,9,26","0:50:39","9","Rock","Technical Death Metal"
+"Duke Ellington","Duke Ellington's Far East Suite","20,9,25","0:44:22","9","Jazz","Big Band"
+"Interpol","Turn On the Bright Lights","20,9,24","0:48:54","11","Rock","Post-Punk Revival"
+"Aphex Twin","Selected Ambient Works 85-92","20,9,23","1:14:20","13","Electronic","Ambient Techno, IDM"
+"Depeche Mode","Violator","20,9,23","0:46:33","9","Pop","Synthpop"
+"Dead Kennedys","Fresh Fruit for Rotting Vegetables","20,7,17","0:32:55","14","Rock","Hardcore Punk, Punk Rock"
+"Mitski","Bury Me at Makeout Creek","20,9,22","0:30:15","10","Rock","Indie Rock"
+"The Microphones","Microphones in 2020","20,9,22","0:44:44","1","Folk","Singer/Songwriter, Indie Folk, Avant-Folk"
+"Fishmans","Long Season","20,10,1","0:35:16","1","Pop","Dream Pop, Progressive Pop, Neo-Psychedelia"
+"The Smiths","The Queen Is Dead","20,10,1","0:36:47","10","Pop","Jangle Pop, Indie Pop"
+"Deftones","Ohms","20,9,29","0:46:17","10","Rock","Alternative Metal"
+"E SENS","The Anecdote","20,9,27","0:38:42","10","Hip Hop","Hip Hop, Boom Bap"
+"Death Grips","Year of the Snitch","20,9,27","0:37:06","13","Hip Hop","Experimental Hip Hop, Abstract Hip Hop"
+"Burial","Untrue","20,9,27","0:50:28","13","Electronic","Future Garage, Dubstep"
+"Arctic Monkeys","Whatever People Say I Am, That's What I'm Not","20,10,5","0:40:58","13","Rock","Indie Rock, Garage Rock Revival"
+"Earl Sweatshirt","Some Rap Songs","20,10,4","0:24:39","15","Hip Hop","Abstract Hip Hop, Experimental Hip Hop"
+"Guns n' Roses","Appetite for Destruction","20,10,3","0:53:42","12","Rock","Hard Rock"
+"Portishead","Dummy","20,10,10","0:45:23","10","Electronic","Trip Hop"
+"Lana Del Rey","Norman Fucking Rockwell!","20,10,10","1:07:40","14","Pop","Singer/Songwriter, Art Pop"
+"Marvin Gaye","What's Going On","20,10,10","0:34:17","9","Soul","Soul"
+"Radiohead","Pablo Honey","20,10,7","0:42:04","12","Rock","Alternative Rock"
+"Vince Staples","Big Fish Theory","20,10,12","0:36:03","12","Hip Hop","West Coast Hip Hop, Experimental Hip Hop, Hardcore Hip Hop"
+"Oneohtrix Point Never","Replica","20,10,12","0:40:57","10","Noise","Plunderphonics, Ambient"
+"Radiohead","The Bends","20,10,12","0:48:36","12","Rock","Alternative Rock"
+"Gorillaz","Plastic Beach","20,10,11","0:56:46","16","Pop","Electropop, Art Pop"
+"Boards of Canada","Music Has the Right to Children","20,10,14","1:03:23","17","Electronic","IDM"
+"Sungazer","Sungazer Vol. II","20,10,12","0:17:10","5","Electronic","Nu Jazz, Glitch Hop, Wonky"
+"Sungazer","Sungazer Vol. I","20,10,12","0:09:42","5","Electronic","Nu Jazz, Jazz Fusion, Wonky"
+"Big Black","Atomizer","20,10,18","0:36:58","10","Rock","Noise Rock, Post-Hardcore"
+"Hum","Inlet","20,10,17","0:55:28","8","Rock","Shoegaze, Alternative Metal"
+"JPEGMAFIA","All My Heroes Are Cornballs","20,10,16","0:45:09","18","Hip Hop","Experimental Hip Hop, Glitch Hop"
+"Travis Scott","Rodeo","20,10,15","1:05:27","14","Hip Hop","Trap, Southern Hip Hop"
+"Animal Collective","Merriweather Post Pavilion","20,10,21","0:54:45","11","Pop","Psychedelic Pop, Neo-Psychedelia, Indietronica"
+"The Notorious B.I.G.","Ready to Die","20,10,21","1:08:58","17","Hip Hop","East Coast Hip Hop, Gangsta Rap, Boom Bap"
+"Phoebe Bridgers","Punisher","20,10,21","0:40:38","10","Folk","Singer/Songwriter, Indie Folk"
+"Radiohead","Amnesiac","20,10,19","0:45:38","11","Rock","Art Rock, Experimental Rock"
+"Ha:tfelt","1719","20,10,18","0:50:45","14","Pop","K-Pop, Alternative R&B"
+"OutKast","Aquemini","20,10,18","1:14:47","16","Hip Hop","Southern Hip Hop, Conscious Hip Hop"
+"Modest Mouse","The Moon & Antarctica","20,10,24","0:58:48","15","Rock","Indie Rock"
+"Meganeko","Sequence Break","20,10,24","0:28:06","7","Electronic","Bitpop"
+"Manic Street Preachers","The Holy Bible","20,10,24","0:56:17","13","Rock","Alternative Rock"
+"Eminem","Kamikaze","20,10,23","0:45:49","13","Hip Hop","Trap, Pop Rap"
+"Joji","Nectar","20,10,22","0:53:05","18","R&B","Alternative R&B"
+"잠비나이","온다 (Onda)","20,10,21","0:50:29","8","Rock","Post-Rock"
+"Quelle Chris","Guns","20,10,26","0:47:31","13","Hip Hop","Conscious Hip Hop, Abstract Hip Hop, Jazz Rap"
+"clipping.","There Existed an Addiction to Blood","20,10,26","1:08:27","15","Hip Hop","Industrial Hip Hop, Horrorcore"
+"King Gizzard and the Lizard Wizard","Polygondwanaland","20,10,25","0:43:46","10","Rock","Psychedelic Rock, Progressive Rock"
+"유재하 [Yoo Jae-Ha]","사랑하기 때문에","20,10,25","0:43:58","9","Pop","Soft Rock, Singer/Songwriter"
+"Skrillex","Scary Monsters and Nice Sprites","20,10,31","0:43:52","9","Electronic","Brostep, Complextro, Fidget House"
+"Lingua Ignota","All Bitches Die","20,10,31","0:42:47","5","Industrial","Death Industrial, Neoclassical Darkwave"
+"Michael Jackson","Thriller","20,10,31","0:42:15","9","Pop","Contemporary R&B, Pop, Dance-Pop"
+"Orchid","Chaos Is Me","20,10,29","0:18:24","11","Rock","Emoviolence, Screamo"
+"Backxwash","God Has Nothing to Do With This Leave Him Out of It","20,10,29","0:22:05","10","Hip Hop","Industrial Hip Hop, Horrorcore"
+"Fleet Foxes","Shore","20,10,29","0:54:22","15","Folk","Indie Folk, Chamber Pop"
+"PJ Harvey","Let England Shake","20,10,29","0:40:04","12","Rock","Singer/Songwriter, Art Rock"
+"Soft Cell","Non-Stop Erotic Cabaret","20,10,28","0:40:34","10","Pop","Synthpop, New Wave"
+"Yes","Close to the Edge","20,10,27","0:38:42","3","Rock","Symphonic Prog, Progressive Rock"
+"Lil Ugly Mane","Mista Thug Isolation","20,10,27","1:13:38","20","Hip Hop","Memphis Rap, Southern Hip Hop"
+"Ava Max","Heaven & Hell","20,11,2","0:44:45","15","Pop","Dance-Pop, Electropop"
+"Black Sabbath","Paranoid","20,11,1","0:41:48","8","Rock","Heavy Metal, Hard Rock"
+"Xiu Xiu","Girl With Basket of Fruit","20,11,1","0:36:35","9","Experimental","Post-Industrial, Experimental"
+"Vampire Weekend","Vampire Weekend","20,11,1","0:34:04","11","Rock","Indie Pop, Indie Rock"
+"clipping.","Visions of Bodies Being Burned","20,11,1","0:52:34","16","Hip Hop","Horrorcore, Industrial Hip Hop, Experimental Hip Hop"
+"Premiata Forneria Marconi","Storia di un minuto","20,11,10","0:34:33","7","Rock","Symphonic Prog, Progressive Rock"
+"Sade","Love Deluxe","20,11,10","0:45:42","9","Soul","Smooth Soul, Sophisti-Pop"
+"Cartola","Cartola","20,11,9","0:34:45","12","Latin American Music","Samba-choro"
+"Deathspell Omega","Paracletus","20,11,8","0:42:08","10","Rock","Black Metal"
+"Jon Hopkins","Immunity","20,11,8","1:00:04","8","Electronic","Microhouse, IDM"
+"Perfume","⊿ (Triangle)","20,11,7","0:54:53","12","Pop","Electropop, J-Pop"
+"Chet Baker","Chet Baker Sings","20,11,7","0:44:21","8","Jazz","Vocal Jazz, Cool Jazz, Standards"
+"Quasimoto","The Unseen","20,11,7","1:03:39","24","Hip Hop","West Coast Hip Hop, Abstract Hip Hop, Jazz Rap, Experimental Hip Hop"
+"The John Coltrane Quartette","Coltrane","20,11,3","0:39:41","5","Jazz","Modal Jazz, Post-Bop"
+"The Mountain Goats","All Hail West Texas","20,11,3","0:42:02","14","Folk","Singer/Songwriter, Indie Folk"
+"The Lord Weird Slough Feg","Traveller","20,11,14","0:44:10","12","Rock","Heavy Metal, US Power Metal"
+"The Koreatown Oddity","Little Dominiques Nosebleed","20,11,14","0:57:13","16","Hip Hop","Conscious Hip Hop, West Coast Hip Hop, Jazz Rap"
+"TEMPOREX","Care","20,11,14","0:19:56","11","Pop","Dream Pop, Bedroom Pop"
+"이소라","7집","20,11,13","0:58:15","13","Pop","Pop Rock"
+"Lorde","Melodrama","20,11,12","0:40:58","11","Pop","Synthpop, Art Pop"
+"Converge","Jane Doe","20,11,11","0:45:15","12","Rock","Mathcore, Metalcore"
+"Jeff Rosenstock","WORRY.","20,11,11","0:37:40","17","Rock","Pop Punk, Power Pop, Indie Rock"
+"Los Campesinos!","Romance Is Boring","20,11,11","0:48:19","15","Rock","Indie Pop, Indie Rock"
+"D'Angelo and The Vanguard","Black Messiah","20,11,11","0:55:54","12","Soul","Neo-Soul"
+"Glidelas","soundtrack for failed sexual advancements","20,11,20","0:23:40","14","Electronic","Breakcore, Acidcore"
+"The Band","The Band","20,11,20","0:43:22","12","Rock","Roots Rock, Folk Rock, Country Rock"
+"William Tyler","New Vanitas","20,11,18","0:39:02","7","Ambient","Ambient"
+"Rory Gallagher","Tattoo","20,11,18","0:46:56","9","Rock","Blues Rock"
+"Radiohead","Hail to the Thief","20,11,18","0:56:33","14","Rock","Alternative Rock, Art Rock"
+"MGMT","Congratulations","20,11,16","0:43:43","9","Pop","Psychedelic Pop, Neo-Psychedelia, Indie Pop"
+"Overkill","Horrorscope","20,11,16","0:52:50","11","Rock","Thrash Metal"
+"Jean Dawson","Pixel Bath","20,11,15","0:38:51","13","Pop","Indie Pop"
+"No Brain","청년폭도맹진가","20,11,15","1:12:16","18","Rock","Punk Rock"
+"Suicide","Suicide","20,11,15","0:31:51","7","Electronic","Synth Punk, Minimal Synth"
+"The Weeknd","After Hours","20,11,29","0:56:12","14","Pop","Alternative R&B, Synthpop"
+"O.C.","Word...Life","20,11,28","0:49:26","13","Hip Hop","East Coast Hip Hop, Boom Bap"
+"Jacob Collier","Djesse Vol. 3","20,11,27","0:41:05","12","","Neo-Soul, Contemporary R&B, Progressive Pop"
+"Afro Kolektyw","Czarno widzę","20,11,27","0:50:28","15","Hip Hop","Hip Hop, Conscious Hip Hop"
+"David Sylvian","Secrets of the Beehive","20,11,26","0:34:31","9","Pop","Art Pop, Ambient Pop"
+"Bruno Pernadas","Those Who Throw Objects at the Crocodiles Will Be Asked to Retrieve Them","20,11,26","0:53:00","10","Pop","Progressive Pop, Art Pop, Jazz Pop, Jazz Fusion"
+"XTC","Skylarking","20,11,26","0:49:29","15","Pop","Psychedelic Pop, Pop Rock"
+"Faust","Faust IV","20,11,25","0:44:13","7","Rock","Krautrock"
+"Meat Puppets","Meat Puppets II","20,11,25","0:29:57","12","Rock","Cowpunk, Alternative Rock"
+"Jay-Z","Reasonable Doubt","20,11,25","0:55:25","14","Hip Hop","East Coast Hip Hop, Boom Bap"
+"John Coltrane","A Love Supreme","20,11,24","0:32:34","4","Jazz","Spiritual Jazz, Avant-Garde Jazz"
+"Bonnie 'Prince' Billy","I See a Darkness","20,11,24","0:37:51","11","Country","Singer/Songwriter, Americana, Alt-Country, Contemporary Folk"
+"Crimson Glory","Transcendence","20,11,23","0:50:20","10","Rock","Heavy Metal, US Power Metal"
+"Funkadelic","Maggot Brain","20,11,23","0:36:06","7","Funk","Funk Rock, Funk"
+"Panic","밑","20,11,22","0:44:53","10","Rock","Alternative Rock, Pop Rock"
+"The Brave Little Abacus","Masked Dancers: Concern in So Many Things You Forget Where You Are","20,11,22","0:49:23","10","Rock","Midwest Emo, Math Rock"
+"ミドリ [Midori]","あらためまして、はじめまして、ミドリです。 (Aratamemashite, hajimemashite, Midori desu.)","20,11,22","0:31:08","10","Rock","Art Punk"
+"Deftones","White Pony","20,11,21","0:48:43","11","Rock","Alternative Metal"
+"The Caretaker","Everywhere at the End of Time - Stage 6","20,12,2","1:25:56","4","Ambient","Dark Ambient, Drone, Turntable Music, Sound Collage"
+"The Caretaker","Everywhere at the End of Time - Stage 5","20,12,2","1:28:19","4","Ambient","Noise, Sound Collage, Dark Ambient, Turntable Music"
+"The Caretaker","Everywhere at the End of Time - Stage 4","20,12,2","1:27:19","4","Ambient","Sound Collage, Turntable Music, Dark Ambient, Noise"
+"The Caretaker","Everywhere at the End of Time - Stage 3","20,12,2","0:45:29","16","Ambient","Turntable Music, Ambient"
+"The Caretaker","Everywhere at the End of Time - Stage 2","20,12,2","0:41:48","10","Ambient","Turntable Music, Ambient"
+"The Caretaker","Everywhere at the End of Time - Stage 1","20,12,2","0:41:18","12","Ambient","Turntable Music, British Dance Band, Ambient"
+"Oneohtrix Point Never","Magic Oneohtrix Point Never","20,12,1","0:47:07","17","Electronic","Progressive Electronic, Neo-Psychedelia"
+"Built to Spill","Perfect From Now On","20,11,30","0:54:12","8","Rock","Indie Rock"
+"Anna von Hausswolff","Dead Magic","20,11,30","0:47:16","5","Darkwave","Neoclassical Darkwave"
+"Lenny Valentino","Uwaga! Jedzie tramwaj","20,11,30","0:42:09","10","Pop","Dream Pop"
+"Lauryn Hill","The Miseducation of Lauryn Hill","20,11,29","1:17:46","16","","Neo-Soul, Contemporary R&B, East Coast Hip Hop"
+"Adrianne Lenker","Songs","20,12,10","0:39:35","11","Folk","Contemporary Folk, Singer/Songwriter"
+"추다혜차지스 [Chudahye Chagis]","오늘밤 당산나무 아래서","20,12,10","0:35:00","9","Folk","Korean Folk Music"
+"Gorillaz","Song Machine, Season One","20,12,9","0:42:53","11","Pop","Synthpop, Art Pop"
+"Kevin & the Bikes","Ironic Songs","20,12,9","0:28:49","10","Rock","Lo-Fi / Slacker Rock"
+"Grimes","Miss Anthropocene","20,12,8","0:44:40","10","Pop","Art Pop, Electronic"
+"Ada Rook","Separated From Her Twin, a Dying Android Arrives on a Mysterious Island.","20,12,8","0:14:07","4","Electronic","Indietronica, Post-Industrial"
+"Oranssi Pazuzu","Mestarin kynsi","20,12,8","0:50:12","6","Rock","Psychedelic Rock, Avant-Garde Metal, Black Metal"
+"Protomartyr","Ultimate Success Today","20,12,7","0:40:08","10","Rock","Post-Punk, Art Punk"
+"R.A.P. Ferreira","Purple Moonlight Pages","20,12,7","0:52:03","18","Hip Hop","Jazz Rap, Abstract Hip Hop"
+"Material Girl","Tangram","20,12,7","0:40:46","7","Hip Hop","Sound Collage, Experimental Hip Hop"
+"Freddie Gibbs & The Alchemist","Alfredo","20,12,6","0:34:58","10","Hip Hop","Gangsta Rap"
+"Sturgill Simpson","Cuttin' Grass Vol. 1: The Butcher Shoppe Sessions","20,12,4","0:55:07","20","Country","Bluegrass"
+"The Necks","Three","20,12,3","1:05:07","3","Jazz","Avant-Garde Jazz"
+"Miasmatic Necrosis","Apex Profane","20,12,22","0:21:58","21","Rock","Goregrind"
+"Taylor Swift","Evermore","20,12,22","1:00:38","15","Folk","Singer/Songwriter, Folk Pop"
+"Ulcerate","Stare Into Death and Be Still","20,12,22","0:58:23","8","Rock","Technical Death Metal"
+"Boris With Merzbow","2R0I2P0","20,12,21","1:17:58","10","Experimental","Noise, Post-Metal"
+"Eartheater","Phoenix: Flames Are Dew Upon My Skin","20,12,21","0:46:31","13","Folk","Avant-Folk, Chamber Folk"
+"유키카 [YUKIKA]","서울여자 (Soul Lady)","20,12,21","0:41:06","13","Pop","K-Pop, Dance-Pop, City Pop"
+"Jessie Ware","What's Your Pleasure?","20,12,21","0:53:19","12","Pop","Dance-Pop, Disco"
+"Mary Halvorson's Code Girl","Artlessly Falling","20,12,20","1:04:12","8","Jazz","Avant-Garde Jazz, Vocal Jazz"
+"Eternal Champion","Ravening Iron","20,12,20","0:37:19","8","Rock","Heavy Metal, US Power Metal"
+"Ka","Descendants of Cain","20,12,19","0:32:55","11","Hip Hop","East Coast Hip Hop, Abstract Hip Hop"
+"I Don't Know How But They Found Me","RAZZMATAZZ","20,12,19","0:37:15","12","Pop","Synthpop, New Wave"
+"Dogleg","Melee","20,12,19","0:35:38","10","Rock","Emo, Post-Hardcore"
+"BbyMutha","Muthaland","20,12,14","1:02:23","25","Hip Hop","Trap, Southern Hip Hop, Hardcore Hip Hop"
+"The Avalanches","We Will Always Love You","20,12,12","1:11:29","25","Electronic","Neo-Psychedelia, Electronic"
+"Neptunian Maximalism","Éons","20,12,11","2:08:21","16","Rock","Avant-Garde Jazz, Drone Metal"
+"Green Day","Father of All…","20,12,31","0:26:18","10","Rock","Garage Rock Revival, Pop Rock"
+"Waxahatchee","Saint Cloud","20,12,31","0:40:06","11","Country","Alt-Country, Singer/Songwriter"
+"Crywank","Fist Me 'Til Your Hand Comes Out My Mouth","20,12,31","0:56:05","27","Folk","Anti-Folk, Freak Folk, Avant-Folk, Experimental"
+"Black Wing","No Moon","20,12,31","0:58:01","9","Darkwave","Darkwave"
+"Undeath","Lesions of a Different Kind","20,12,31","0:35:32","10","Rock","Death Metal"
+"Blu & Exile","Miles","20,12,31","1:35:21","20","Hip Hop","West Coast Hip Hop, Conscious Hip Hop, Jazz Rap"
+"Sault","Untitled (Rise)","20,12,30","0:50:47","15","Soul","Neo-Soul"
+"Nine Inch Nails","Ghosts V: Together","20,12,30","1:10:18","8","Ambient","Ambient"
+"Moor Mother & Billy Woods","Brass","20,12,30","0:43:45","15","Hip Hop","Abstract Hip Hop, East Coast Hip Hop, Experimental Hip Hop"
+"Slift","Ummon","20,12,30","1:12:05","11","Rock","Space Rock, Heavy Psych"
+"Boldy James & Real Bad Man","Real Bad Boldy","20,12,29","0:29:39","10","Hip Hop","Gangsta Rap"
+"Kairon; IRSE!","Polysomn","20,12,29","0:49:01","9","Rock","Shoegaze, Space Rock, Neo-Psychedelia"
+"tricot","10","20,12,29","0:36:45","10","Rock","Math Rock, Indie Rock"
+"Sufjan Stevens","The Ascension","20,12,29","1:20:30","15","Pop","Art Pop, Indietronica"
+"Motorpsycho","The All Is One","20,12,28","1:24:42","13","Rock","Progressive Rock, Psychedelic Rock"
+"Imperial Triumphant","Alphaville","20,12,28","0:59:18","9","Rock","Avant-Garde Metal, Technical Death Metal"
+"Neil Cicierega","Mouth Dreams","20,12,28","1:01:04","6","Pop","Mashup, Musical Comedy, Pop"
+"Wobbler","Dwellers of the Deep","20,12,28","0:45:40","4","Rock","Symphonic Prog, Progressive Rock"
+"Gupi","None","20,12,28","0:35:40","11","Electronic","Bubblegum Bass"
+"Playboi Carti","Whole Lotta Red","20,12,26","1:03:02","24","Hip Hop","Trap, Southern Hip Hop"
+"Jeff Rosenstock","NO DREAM","20,12,25","0:40:09","13","Pop","Pop Punk, Power Pop"
+"Haken","Virus","20,12,25","0:51:54","11","Rock","Progressive Metal"
+"Omegavortex","Black Abomination Spawn","20,12,25","0:45:25","9","Rock","Black Metal, Technical Death Metal"
+"Aesop Rock","Spirit World Field Guide","20,12,25","1:03:06","21","Hip Hop","Abstract Hip Hop"
+"Chris Stapleton","Starting Over","20,12,25","0:53:40","14","Country","Contemporary Country"
+"Slauson Malone","Vergangenheitsbewältigung (Crater Speak)","20,12,24","0:24:14","9","","Neo-Soul, Sound Collage"
+"Tkay Maidza","Last Year Was Weird, Vol. 2","20,12,24","0:26:54","8","Hip Hop","Pop Rap"
+"Quelle Chris & Chris Keys","Innocent Country 2","20,12,24","1:03:50","16","Hip Hop","Abstract Hip Hop, Jazz Rap, Conscious Hip Hop"
+"K/DA","All Out","20,12,23","0:16:16","4","Pop","Trap [EDM], K-Pop"
+"Kid Cudi","Man on the Moon III: The Chosen","20,12,23","0:58:37","18","Hip Hop","Pop Rap, Trap"
+"Idles","Ultra Mono","20,12,23","0:42:49","12","Rock","Post-Punk, Art Punk"
+"Grimes","Art Angels","21,1,8","0:49:49","14","Pop","Electropop, Synthpop"
+"The Antlers","Hospice","21,1,10","0:51:47","10","Rock","Indie Rock"
+"Bob Dylan","Highway 61 Revisited","21,2,8","0:48:49","9","Rock","Folk Rock, Singer/Songwriter"
+"Black Country, New Road","For the First Time","21,2,8","0:40:44","6","Rock","Post-Rock, Experimental Rock, Post-Punk"
+"Aubrey Key","Cow","21,2,10","0:24:23","9","Folk",""
+"The The","Soul Mining","21,2,14","0:41:46","7","Pop","New Wave, Art Pop"
+"Jim O'Rourke","Insignificance","21,2,14","0:38:24","7","Rock","Singer/Songwriter, Indie Rock, Art Rock"
+"At The Drive-In","Relationship of Command","21,2,23","0:45:22","11","Rock","Post-Hardcore"
+"slowthai","Tyron","21,2,23","0:35:14","14","Hip Hop","UK Hip Hop, Trap"
+"파란노을 [Parannoul]","To See the Next Part of the Dream","21,4,3","1:01:37","10","Rock","Shoegaze, Emo"
+"underscores","fishmonger","21,4,3","0:33:41","10","Pop","Indie Pop, Hyperpop"
+"Godspeed You! Black Emperor","G_d's Pee AT STATE'S END!","21,4,5","0:52:38","8","Rock","Post-Rock"
+"Brockhampton","Roadrunner: New Light, New Machine","21,5,1","0:46:34","14","Hip Hop","West Coast Hip Hop"
+"Andrew Jackson Jihad","People Who Can Eat People Are the Luckiest People in the World","21,5,16","0:25:17","11","Folk","Folk Punk, Anti-Folk"
+"Armand Hammer & The Alchemist","Haram","21,5,29","0:39:54","14","Hip Hop","Abstract Hip Hop, East Coast Hip Hop, Hardcore Hip Hop"
+"black midi","Cavalcade","21,6,13","0:42:19","8","Rock","Avant-Prog"
+"Psy","Psy From the Psycho World!","21,6,18","1:07:30","20","Hip Hop","Hip Hop"
+"Bladee","The Fool","21,6,18","0:32:19","13","Hip Hop","Cloud Rap, Trap, Pop Rap"
+"Asian Glow","Cull Ficle","21,6,18","0:52:26","14","Rock","Lo-Fi / Slacker Rock, Noise Pop, Emo"
+"Issam Hajali","Mouasalat ila jacad el ard","21,6,19","0:35:03","7","Pop","Arabic Pop, Singer/Songwriter"
+"The Mars Volta","Frances the Mute","21,6,19","1:16:55","12","Rock","Progressive Rock, Experimental Rock, Art Rock"
+"Jazzyfact","Lifes Like","21,6,22","0:47:22","14","Hip Hop","Jazz Rap"
+"이달의 소녀 오드아이써클 [LOONA ODD EYE CIRCLE]","Max & Match","21,7,3","0:25:14","8","Pop","K-Pop, Dance-Pop, Future Bass"
+"Squid","Bright Green Field","21,7,27","0:54:44","11","Rock","Art Punk, Post-Punk, Experimental Rock"
+"Backxwash","I Lie Here Buried With My Rings and My Dresses","21,7,27","0:32:58","10","Hip Hop","Industrial Hip Hop, Horrorcore"
+"MIKE",""Disco!"","21,7,27","0:43:12","17","Hip Hop","Abstract Hip Hop, Experimental Hip Hop, East Coast Hip Hop"
+"RXK Nephew","Slitherman Activated","21,7,28","0:49:05","16","Hip Hop","Trap, Gangsta Rap, Experimental Hip Hop, East Coast Hip Hop"
+"PremRock","Load Bearing Crow's Feet","21,7,29","0:35:35","12","Hip Hop","East Coast Hip Hop, Abstract Hip Hop"
+"BIGMUTHA","Bastard Tapes Vol. 3","21,7,29","0:18:37","10","Hip Hop","Southern Hip Hop, Trap"
+"Lil Ugly Mane","Oblivion Access","21,7,30","0:43:56","13","Hip Hop","Experimental Hip Hop, Abstract Hip Hop"
+"IU","Chat-shire","19,12,31","0:31:56","9","Pop","K-Pop"
+"Joy Division","Unknown Pleasures","19,12,31","0:38:21","10","Rock","Post-Punk"
+"Post Malone","Hollywood's Bleeding","19,12,29","0:50:55","17","Pop","Pop Rap"
+"Kero Kero Bonito","Time 'n' Place","19,12,29","0:32:53","12","Pop","Twee Pop, Indie Pop"
+"Charli XCX","Charli","19,12,29","0:50:56","15","Pop","Electropop, Bubblegum Bass"
+"Nails","Unsilent Death","19,12,28","0:13:58","10","Rock","Grindcore, Powerviolence"
+"Severon","Ghosting","19,12,28","0:15:09","7","",""
+"Swans","The Seer","19,12,27","1:58:58","11","Rock","Experimental Rock, Post-Rock"
+"Metallica","Master of Puppets","19,12,27","0:54:00","8","Rock","Thrash Metal"
+"Tame Impala","Innerspeaker","19,12,25","0:53:20","11","Rock","Psychedelic Rock, Neo-Psychedelia"
+"Radiohead","Kid A","19,12,24","0:49:55","10","Rock","Art Rock, Experimental Rock, Electronic"
+"Sufjan Stevens","Carrie & Lowell","19,12,22","0:43:35","11","Folk","Indie Folk, Singer/Songwriter"
+"Frank Ocean","Blonde","19,12,22","1:00:08","17","R&B","Alternative R&B, Art Pop, Neo-Soul"
+"Kanye West","My Beautiful Dark Twisted Fantasy","19,12,21","1:08:36","13","Hip Hop","Pop Rap, Hip Hop"
+"Earl Sweatshirt","I Don't Like Shit, I Don't Go Outside","19,12,20","0:29:56","10","Hip Hop","Abstract Hip Hop, West Coast Hip Hop"
+"Tame Impala","Lonerism","19,12,20","0:51:50","12","","Neo-Psychedelia"
+"Kendrick Lamar","untitled unmastered.","19,12,19","0:34:09","8","Hip Hop","Jazz Rap, Conscious Hip Hop, West Coast Hip Hop"
+"C418","Minecraft: Volume Alpha","19,12,19","0:57:04","24","Noise","Ambient, Video Game Music"
+"The Velvet Underground & Nico","The Velvet Underground & Nico","19,12,19","0:47:51","11","Rock","Art Rock, Experimental Rock"
+"Pink Floyd","Wish You Were Here","19,12,18","0:44:10","5","Rock","Progressive Rock, Art Rock"
+"MF DOOM","Mm.. Food","19,12,15","0:49:14","15","Hip Hop","East Coast Hip Hop, Abstract Hip Hop"
+"Coldplay","Everyday Life","19,12,15","0:52:49","16","Pop","Art Pop"
+"Kendrick Lamar","DAMN.","19,12,14","0:54:54","14","Hip Hop","Conscious Hip Hop, West Coast Hip Hop"
+"Kendrick Lamar","Section.80","19,12,14","0:59:56","16","Hip Hop","West Coast Hip Hop, Conscious Hip Hop"
+"Fleet Foxes","Helplessness Blues","19,12,13","0:49:57","12","Folk","Indie Folk, Chamber Folk"
+"Death Grips","Government Plates","19,12,13","0:35:37","11","Hip Hop","Industrial Hip Hop, Abstract Hip Hop, Glitch Hop, Experimental Hip Hop"
+"Pink Floyd","Animals","19,12,10","0:41:39","5","Rock","Progressive Rock, Art Rock"
+"Beastie Boys","Hot Sauce Committee Part Two","19,12,10","0:44:18","16","Hip Hop","East Coast Hip Hop"
+"Pink Floyd","The Dark Side of the Moon","19,12,8","0:42:48","10","Rock","Art Rock, Progressive Rock"
+"Radiohead","OK Computer","19,12,4","0:53:21","12","Rock","Alternative Rock, Art Rock"
+"Punch Brothers","Punch","19,11,29","0:56:22","8","Country","Progressive Bluegrass"
+"David Bowie","★ [Blackstar]","19,11,29","0:41:13","7","Rock","Art Rock"
+"Mount Eerie","A Crow Looked at Me","19,11,29","0:41:30","11","Folk","Singer/Songwriter, Indie Folk, Contemporary Folk"
+"공중도둑 [Mid-Air Thief]","무너지기 (Crumbling)","19,11,27","0:44:04","8","Electronic","Folktronica, Neo-Psychedelia, Psychedelic Pop"
+"LINGUA IGNOTA","Caligula","19,11,27","1:06:01","11","Industrial","Neoclassical Darkwave, Death Industrial"
+"King Crimson","In the Court of the Crimson King","19,11,26","0:41:59","5","Rock","Progressive Rock, Art Rock"
+"Kanye West","Jesus Is King","19,11,26","0:27:04","11","Hip Hop","Christian Hip Hop"
+"Run the Jewels","Run the Jewels 3","19,11,26","0:51:36","14","Hip Hop","Hardcore Hip Hop"
+"Death Grips","NO LOVE DEEP WEB","19,11,25","0:45:44","13","Hip Hop","Experimental Hip Hop, Hardcore Hip Hop, Abstract Hip Hop"
+"Kero Kero Bonito","Bonito Generation","19,11,23","0:36:22","12","Pop","Electropop"
+"Weyes Blood","Titanic Rising","19,11,23","0:42:22","10","Pop","Baroque Pop, Art Pop"
+"Run the Jewels","Run the Jewels","19,11,23","0:32:58","10","Hip Hop","Hardcore Hip Hop"
+"Run the Jewels","Run the Jewels 2","19,11,22","0:38:56","11","Hip Hop","Hardcore Hip Hop"
+"FKA twigs","Magdalene","19,11,21","0:38:48","9","Pop","Art Pop, Glitch Pop"
+"Gonjasufi","A Sufi and a Killer","19,11,20","0:58:50","19","Electronic","Psychedelic Soul, Electronic, Psychedelic Rock"
+"BADBADNOTGOOD","BBNG2","19,11,20","1:01:03","11","Jazz","Jazz Fusion"
+"FKA twigs","M3LL155X","19,11,19","0:18:39","5","Pop","Art Pop, Glitch Pop, UK Bass"
+"TNGHT","II","19,11,19","0:24:03","8","Electronic","Trap [EDM], Wonky"
+"Horrendous","Idol","19,11,19","0:40:05","8","Rock","Progressive Metal, Death Metal"
+"Underscores","We Never Got Strawberry Cake","19,11,18","0:09:30","3","R&B","Alternative R&B, Art Pop"
+"Underscores","Skin Purifying Treatment","19,11,18","0:24:47","8","Pop","Future Bass, Glitch Pop"
+"The Pop Group","Citizen Zombie","19,11,18","0:39:59","11","Rock","Post-Punk, Experimental Rock, Art Punk"
+"Chromeo","Business Casual","19,11,18","0:39:26","10","Electronic","Electro-Disco, Synthpop, Funktronica"
+"Ondatrópica","Ondatrópica","19,11,18","1:17:10","19","Latin American Music","Cumbia"
+"TNGHT","TNGHT","19,11,18","0:15:49","5","Electronic","Trap [EDM], Wonky"
+"Jack White","Boarding House Reach","19,11,18","0:44:15","13","Rock","Blues Rock, Experimental Rock"
+"Iceage","Plowing Into the Field of Love","19,11,18","0:47:54","12","Rock","Post-Punk"
+"Against All Logic","2012 - 2017","19,11,18","1:06:42","11","Electronic","Deep House"
+"Kanye West","Graduation","19,11,18","0:51:24","13","","Pop Rap"
+"Battles","Gloss Drop","19,11,18","0:53:47","12","Rock","Math Rock, Neo-Psychedelia"
+"Neil Cicierega","Mouth Moods","19,11,18","0:56:43","20","Pop","Mashup, Pop, Musical Comedy"
+"Brockhampton","Saturation","19,11,18","0:51:02","17","Hip Hop","Pop Rap, West Coast Hip Hop"
+"おとぼけビ～バ～ [Otoboke Beaver]","いてこまヒッツ (Itekoma Hits)","19,11,18","0:26:26","14","Rock","Hardcore Punk"
+"Perfume Genius","Put Your Back N 2 It","19,11,18","0:32:37","12","Pop","Chamber Pop, Singer/Songwriter"
+"Kendrick Lamar","good kid, m.A.A.d city","19,11,18","1:08:16","12","Hip Hop","West Coast Hip Hop, Conscious Hip Hop"
+"Tim Hecker","Virgins","19,11,18","0:48:54","12","Noise","Ambient, Drone, Electroacoustic"
+"Ghost","Meliora","19,11,18","0:41:35","10","Rock","Hard Rock, Heavy Metal"
+"Julia Holter","Have You in My Wilderness","19,11,18","0:46:00","10","Pop","Art Pop, Chamber Pop"
+"Danny Brown","uknowhatimsayin¿","19,11,18","0:33:37","11","Hip Hop","Hardcore Hip Hop, Abstract Hip Hop"
+"Danny Brown","Atrocity Exhibition","19,11,18","0:46:38","15","Hip Hop","Experimental Hip Hop, Hardcore Hip Hop"
+"Kids See Ghosts","Kids See Ghosts","19,11,18","0:23:50","7","Hip Hop","Pop Rap, Experimental Hip Hop, Alternative R&B"
+"Idles","Joy as an Act of Resistance.","19,11,18","0:42:23","12","Rock","Post-Punk, Post-Hardcore"
+"Daughters","You Won't Get What You Want","19,11,18","0:48:33","10","Rock","Noise Rock, Industrial Rock"
+"Melt-Banana","Fetch","19,11,18","0:32:11","12","Rock","Noise Rock, Experimental Rock"
+"Sun Kil Moon","Benji","19,11,18","1:28:41","16","Folk","Contemporary Folk, Singer/Songwriter"
+"Tyler, the Creator","Flower Boy","19,11,18","0:46:49","14","Hip Hop","West Coast Hip Hop"
+"Rina Sawayama","RINA","19,11,18","0:24:51","8","Pop","Electropop, Contemporary R&B"
+"Parquet Courts","Wide Awake!","19,11,18","0:38:38","13","Rock","Art Punk, Indie Rock"
+"Little Women","Throat","19,11,18","0:41:15","7","Jazz","Avant-Garde Jazz"
+"Women","Public Strain","19,11,18","0:42:18","11","Rock","Post-Punk, Indie Rock, Noise Pop"
+"Fiona Apple","The Idler Wheel Is Wiser Than the Driver of the Screw and Whipping Cords Will Serve You More Than Ropes Will Ever Do","19,11,18","0:42:37","10","Pop","Art Pop, Singer/Songwriter"
+"Freddie Gibbs & Madlib","Piñata","19,11,18","1:00:12","17","Hip Hop","Gangsta Rap"
+"Swans","The Glowing Man","19,11,18","1:59:20","8","Rock","Post-Rock, Experimental Rock"
+"A Tribe Called Quest","We got it from Here… Thank You 4 Your service","19,11,18","1:00:18","16","Hip Hop","East Coast Hip Hop, Conscious Hip Hop, Jazz Rap"
+"Madvillain","Madvillainy","19,11,18","0:46:13","22","Hip Hop","Abstract Hip Hop"
+"LCD Soundsystem","This Is Happening","19,11,18","1:05:32","9","Electronic","Dance-Punk, Indietronica"
+"The Books","The Way Out","19,11,18","0:50:12","14","Electronic","Electronic, Folktronica"
+"Swans","To Be Kind","19,11,18","2:01:12","10","Rock","Experimental Rock, Post-Rock"
+"clipping.","CLPPNG","19,11,18","0:55:31","14","Hip Hop","Industrial Hip Hop, Experimental Hip Hop, West Coast Hip Hop"
+"Tyler, the Creator","Igor","19,11,18","0:39:43","12","Soul","Neo-Soul, Psychedelic Soul"
+"Death Grips","The Money Store","19,11,18","0:41:11","13","Hip Hop","Hardcore Hip Hop, Experimental Hip Hop, Industrial Hip Hop"
+"Kendrick Lamar","To Pimp a Butterfly","19,11,18","1:18:51","16","Hip Hop","Conscious Hip Hop, West Coast Hip Hop, Jazz Rap"
+"Father John Misty","Pure Comedy","19,11,18","1:14:17","13","Pop","Singer/Songwriter, Piano Rock, Chamber Pop"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
